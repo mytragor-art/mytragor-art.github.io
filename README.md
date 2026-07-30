@@ -6,7 +6,7 @@ Site estático principal do Mytragor, preparado para publicação no GitHub Page
 
 - `/`: página inicial e navegação principal
 - `/comojogar/`: leitor visual do guia Como Jogar
-- `/calculadora-mytragor/`: calculadora oficial de mesa
+- `http://mytragor.com.br/calculadora-mytragor/`: calculadora oficial de mesa
 - `https://mytragor-battle-sim.vercel.app/lobby.html`: simulador oficial publicado separadamente
 
 ## Testar antes de publicar

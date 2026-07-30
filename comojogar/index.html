@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5d393d">
+  <meta name="description" content="Manual de como jogar Mytragor — consulte todas as páginas online.">
+  <title>Como Jogar | Mytragor</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="manual" aria-label="Manual de como jogar Mytragor">
+    <header class="topbar">
+      <div class="brand" aria-label="Mytragor">
+        <a href="/" aria-label="Voltar ao início">
+          <img class="brand-logo" src="/assets/logo-dourado.png" alt="Mytragor">
+        </a>
+        <span class="brand-subtitle">Manual de jogo</span>
+      </div>
+
+      <div class="page-status" aria-live="polite" aria-atomic="true">
+        <span id="pageLabel">Capa</span>
+        <span class="page-number"><b id="currentPage">1</b> / <span id="totalPages">18</span></span>
+      </div>
+    </header>
+
+    <section class="viewer" id="viewer">
+      <button class="nav-button previous" id="previousButton" type="button" aria-label="Página anterior">
+        <span aria-hidden="true">‹</span>
+      </button>
+
+      <div class="page-frame" id="pageFrame">
+        <div class="loading" id="loading" aria-hidden="true"></div>
+        <div class="page-sheet">
+          <img
+            id="manualPage"
+            src="/assets/manual_capa.png"
+            alt="Capa do manual Mytragor"
+            draggable="false"
+          >
+        </div>
+      </div>
+
+      <button class="nav-button next" id="nextButton" type="button" aria-label="Próxima página">
+        <span aria-hidden="true">›</span>
+      </button>
+    </section>
+
+    <footer class="footer">
+      <button class="footer-button" id="footerPrevious" type="button" aria-label="Voltar para a página anterior">
+        <span aria-hidden="true">←</span> Anterior
+      </button>
+      <p>Use as setas ou deslize para navegar</p>
+      <button class="footer-button primary" id="footerNext" type="button" aria-label="Avançar para a próxima página">
+        Próxima <span aria-hidden="true">→</span>
+      </button>
+    </footer>
+  </main>
+
+  <noscript>
+    <p class="noscript">Ative o JavaScript no navegador para consultar o manual.</p>
+  </noscript>
+
+  <script src="./script.js"></script>
+</body>
+</html>

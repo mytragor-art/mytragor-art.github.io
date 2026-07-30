@@ -1,12 +1,79 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="refresh" content="0;url=/comojogar/">
-  <title>Mytragor</title>
-  <link rel="canonical" href="https://mytragor.com.br/comojogar/">
-  <style>html,body{height:100%;margin:0}body{display:grid;place-items:center;background:#231618;color:#d9b86d;font:600 16px Arial,sans-serif}a{color:#d9b86d}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#241416">
+  <meta name="description" content="Mytragor: conheça o jogo, consulte as regras e prepare-se para a batalha.">
+  <title>Mytragor | Estratégia, cartas e conquista</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body><p>Redirecionando para <a href="/comojogar/">Como jogar Mytragor</a>…</p></body>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="Mytragor - início">
+      <img src="/assets/logo-dourado.png" alt="Mytragor">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainMenu">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menu</span>
+    </button>
+    <nav class="main-menu" id="mainMenu" aria-label="Menu principal">
+      <a aria-current="page" href="/">Início</a>
+      <a href="/comojogar/">Como jogar</a>
+      <a href="https://mytragor.com.br/simuladormultiplayer/">Simulador</a>
+      <a href="#comunidade">Comunidade</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">Jogo de cartas estratégico</p>
+        <h1 id="heroTitle">Mytragor</h1>
+        <p class="hero-text">Convoque aliados, domine os fragmentos e escreva sua história em batalhas onde cada decisão muda o destino.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/comojogar/">Aprenda a jogar</a>
+          <a class="button secondary" href="https://mytragor.com.br/simuladormultiplayer/">Abrir simulador</a>
+        </div>
+      </div>
+      <a class="manual-preview" href="/comojogar/" aria-label="Abrir Como jogar Mytragor">
+        <img src="/assets/manual_capa.png" alt="Capa do manual Como Jogar Mytragor">
+      </a>
+    </section>
+
+    <section class="pathways" aria-labelledby="pathwaysTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Escolha seu caminho</p>
+        <h2 id="pathwaysTitle">Entre no mundo de Mytragor</h2>
+      </div>
+      <div class="pathway-grid">
+        <a class="pathway" href="/comojogar/">
+          <span class="pathway-number">01</span>
+          <h3>Como jogar</h3>
+          <p>Conheça os fundamentos, as cartas e o fluxo de uma batalha.</p>
+          <span class="pathway-link">Ler agora →</span>
+        </a>
+        <a class="pathway" href="https://mytragor.com.br/simuladormultiplayer/">
+          <span class="pathway-number">02</span>
+          <h3>Simulador</h3>
+          <p>Teste estratégias e experimente o campo de batalha digital.</p>
+          <span class="pathway-link">Jogar →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="community" id="comunidade" aria-labelledby="communityTitle">
+      <p class="eyebrow">Comunidade</p>
+      <h2 id="communityTitle">A próxima batalha começa aqui.</h2>
+      <p>Novos canais da comunidade Mytragor serão reunidos neste espaço.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="/assets/logo-dourado.png" alt="Mytragor">
+    <p>© <span id="currentYear">2026</span> Mytragor. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
 </html>

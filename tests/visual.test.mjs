@@ -33,6 +33,17 @@ test('tipografia usa fantasia literária suave, sem as fontes rígidas anteriore
   assert.ok(css.includes('prefers-reduced-motion'));
 });
 
+test('banners no celular mantêm a proporção natural e ficam separados do texto', async () => {
+  const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
+  const mobile = css.slice(css.lastIndexOf('@media(max-width:600px)'));
+  const artwork = mobile.match(/\.inner-page \.page-intro-art,\.gallery-page \.page-intro-art\{([^}]+)\}/)?.[1];
+  assert.ok(artwork);
+  for (const rule of ['position:relative', 'height:auto', 'aspect-ratio:auto', 'object-fit:contain']) {
+    assert.ok(artwork.includes(rule), rule);
+  }
+  assert.ok(mobile.includes('.inner-page .page-intro::before{content:none}'));
+});
+
 test('páginas internas usam capítulos ilustrados leves com créditos e funções preservadas', async () => {
   const pages = [
     ['cartas/index.html','gallery-page','id="cardSearch"'],

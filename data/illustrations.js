@@ -29,7 +29,7 @@ const artists = {
   thornmontanha: 'Flávio Winston', tonicorevigorante: 'IlustreVick', Toupeiraescavadora: 'Katarina Banffy',
   trocaenergia: 'Katarina Banffy', truque_alertadefuga: 'Jeferson Cordeiro',
   truque_emboscada: 'IlustreVick', 'truque_interrupçãoperfeita': 'Mateus “Maten” Araújo',
-  ursonegro: 'Diogo Roesberg', xamakobold: 'Katarina Banffy', Yohanronin: 'Diogo Roesberg',
+  ursonegro: 'Enzo Anael', xamakobold: 'Katarina Banffy', Yohanronin: 'Diogo Roesberg',
   'valbrak-full-art': 'IlustreVick', 'valbrak-full-art-v3': 'André Martuscelli',
   'katsu-full-art': 'Letícia Machado', 'ademais-full-art': 'Marcella “Fufunha” Cappelletti',
   'leafae-full-art': 'Sam Trioni', 'thorn-full-art': 'rac_art_11', 'executor-full-art': 'Katarina Banffy',

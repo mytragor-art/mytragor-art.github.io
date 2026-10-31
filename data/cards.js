@@ -88,7 +88,7 @@ export const cards = entries.map(([id, name, type, affiliation, cost, descriptio
   image: `/media/cartas/layout-${id}.webp`,
   thumbnail: `/media/cartas/thumbs/layout-${id}.webp`,
   reading: `/media/cartas/leitura/layout-${id}.webp`,
-  original: `/cartas.png/layout-${id}.png`
+  original: `/cartas.png/layout-${id}${id === 'ursonegro' ? '.ai' : ''}.png`
 }));
 export const cardById = new Map(cards.map(card => [card.id, card]));
 export function normalize(value) { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); }

@@ -45,7 +45,8 @@ test('artes são distintas das cartas e cada versão preserva seu ilustrador con
     ['escolhido_katsuvingador', 'Artur Bohrer'], ['katsu-full-art', 'Letícia Machado'],
     ['escolhido_leafaefloresta', 'Katarina Banffy'], ['leafae-full-art', 'Sam Trioni'],
     ['porcoespinho', 'Ruam Costa'], ['porco-espinho-full-art', 'Diogo Roesberg'],
-    ['valbrak-full-art-v3', 'André Martuscelli'], ['valbrak-prestigio', 'Diego Fernando']
+    ['valbrak-full-art-v3', 'André Martuscelli'], ['valbrak-prestigio', 'Diego Fernando'],
+    ['ursonegro', 'Enzo Anael']
   ]) assert.equal(byCard.get(id)?.artist, author, id);
 });
 

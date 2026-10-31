@@ -1,0 +1,42 @@
+/* The artwork is the exhibit, never a cropped background behind the title. */
+.illustrations-page{--chapter-accent:#d9b98b;background:radial-gradient(ellipse at 90% 0,#71604612,transparent 800px),var(--bg)}
+.art-intro,.art-content{padding-inline:max(24px,calc((100% - 1160px)/2))}
+.art-intro{padding-block:42px 38px;border-bottom:1px solid var(--line)}
+.art-intro .breadcrumb{margin-bottom:28px}
+.art-intro .eyebrow{margin-bottom:12px;color:var(--chapter-accent)}
+.art-intro h1{font-size:clamp(40px,5vw,68px);line-height:1.08;margin-bottom:20px;text-wrap:balance}
+.art-intro-copy{max-width:660px;font-size:19px;color:#e0d9ce}
+.art-credits-note{max-width:740px;font-size:14px;color:var(--muted);margin-bottom:18px}
+.art-credits-note strong{font-weight:500;color:var(--paper)}
+.art-content{padding-block:30px 64px}
+.art-filters .field{min-width:0}
+.art-filters .field:first-child{flex:2}
+.art-filters .field input,.art-filters .field select{font-size:16px}
+.art-filters .button{flex-shrink:0}
+.art-grid{columns:3;column-gap:24px}
+.art-tile{display:inline-block;width:100%;break-inside:avoid;margin:0 0 26px;vertical-align:top}
+.art-open{display:block;width:100%;padding:0;text-align:left;background:#1c1c1f;border:1px solid #d9b86d29;border-radius:6px;overflow:hidden;transition:border-color .2s,background .2s}
+.art-open:hover,.art-open:focus-visible{border-color:var(--gold);background:#252326}
+.art-open img{display:block;width:100%;height:auto;object-fit:contain;background:#111113}
+.art-tile-caption{display:block;padding:17px 18px 18px;overflow-wrap:anywhere}
+.art-tile h2{font-size:25px;line-height:1.15;margin:0 0 7px}
+.art-credit{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.art-variant{display:block;font-size:12px;color:var(--gold);margin-top:7px}
+.art-empty{text-align:center;padding:44px 20px;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+.art-empty h2{font-size:32px}.art-empty p{color:var(--muted)}
+.art-dialog{width:min(1080px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:92vh;max-height:92dvh;margin:auto;padding:0;border:1px solid var(--line);border-radius:8px;overflow:auto;overscroll-behavior:contain;background:#1b1b1e;color:var(--paper)}
+.art-dialog::backdrop{background:#08090bef;backdrop-filter:blur(5px)}
+.art-dialog-toolbar{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;border-bottom:1px solid var(--line);background:#1b1b1ef5}
+.art-dialog-toolbar>span{font-size:13px;color:var(--muted)}
+.art-dialog-close{min-height:44px;padding:8px 16px;border:1px solid var(--line);border-radius:4px;background:var(--bg);font-size:15px;white-space:nowrap}
+.art-dialog-figure{margin:0}
+.art-image-stage{display:flex;justify-content:center;align-items:center;padding:18px;background:#101012}
+.art-dialog .art-image-stage img{display:block;width:auto;max-width:100%;height:auto;max-height:65vh;max-height:65dvh;object-fit:contain}
+.art-dialog-caption{display:flex;justify-content:space-between;align-items:start;gap:24px;padding:22px;overflow-wrap:anywhere}
+.art-dialog-caption>div{min-width:0}.art-dialog-caption h2{font-size:30px;margin-bottom:8px}
+.art-dialog-caption p{font-size:15px;color:var(--muted);margin:0 0 6px}
+.art-dialog-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px;flex-shrink:0}
+.illustrations-page .site-footer nav{max-width:720px;gap:12px 22px}
+@media(min-width:861px) and (max-width:1200px){.illustrations-page .site-header{padding-inline:22px;gap:16px}.illustrations-page .main-menu{gap:10px}.illustrations-page .main-menu a{font-size:12px}.illustrations-page .main-menu .nav-cta{padding-inline:10px}.illustrations-page .site-brand .brand-logo{width:155px}}
+@media(max-width:860px){.art-grid{columns:2;column-gap:20px}.art-dialog-caption{flex-direction:column;gap:14px}.art-dialog-actions{flex-shrink:1}.art-intro{padding-top:30px}}
+@media(max-width:540px){.art-grid{columns:1}.art-intro,.art-content{padding-inline:20px}.art-intro{padding-block:26px 30px}.art-intro-copy{font-size:17px}.art-filters{flex-direction:column;align-items:stretch}.art-filters .field,.art-filters .field:first-child{flex:auto;width:100%}.art-tile{margin-bottom:20px}.art-dialog{width:calc(100vw - 20px);max-width:calc(100vw - 20px);max-height:94dvh}.art-dialog-toolbar{padding:8px 12px}.art-dialog-toolbar>span{font-size:12px}.art-image-stage{padding:10px}.art-dialog .art-image-stage img{max-height:55dvh}.art-dialog-caption{padding:16px}.art-dialog-caption h2{font-size:27px}}

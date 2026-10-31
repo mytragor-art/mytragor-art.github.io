@@ -16,10 +16,7 @@ test('catálogo: IDs e nomes únicos e imagens existentes', async () => {
   assert.equal(new Set(cards.map(c => c.id)).size, cards.length);
   assert.equal(new Set(cards.map(c => c.name)).size, cards.length);
   for (const card of cards) {
-    for (const image of [card.image, card.thumbnail, card.reading]) {
-      assert.ok(image.startsWith('/media/'));
-      await access(new URL(`.${image}`, root));
-    }
+    await access(new URL(`.${card.image}`, root)); await access(new URL(`.${card.original}`, root));
     if (card.type !== 'Escolhido') assert.ok(Number.isInteger(card.cost) && card.cost >= 0);
   }
 });

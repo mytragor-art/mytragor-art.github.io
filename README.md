@@ -15,7 +15,7 @@ Não foram inventados canais sociais, eventos, depoimentos, notícias ou duraç�
 
 ## Desenvolvimento e validação
 
-Requer Node.js 22.13+ (testado com Node 24). No Windows, utilize `npm.cmd` se a política do PowerShell bloquear `npm.ps1`.
+Requer Node.js 20.9+ (testado com Node 24). No Windows, utilize `npm.cmd` se a política do PowerShell bloquear `npm.ps1`.
 
 1. `npm.cmd install`: instala apenas as ferramentas de desenvolvimento.
 2. `npm.cmd start`: inicia servidor em `http://127.0.0.1:4173`.
@@ -29,12 +29,9 @@ Também existem tarefas do VS Code **Prévia Mytragor** e **Testar Mytragor**. U
 - `data/cards.js`: nomes, tipos, filiações e custos conferidos nas cartas, descrições dos Escolhidos e indicação de Totens. Atualize quando uma carta mudar.
 - `data/gallery.js`: versões de coleção e Fragmentos, separados das identidades jogáveis. Full Art e Prestígio encaminham à carta base no montador. Valbrak da versão 3 (arte de André Martuscelli), Pica-pau dourado, Katsu PeB e Fragmento Aerin são Promo. Valbrak versão 4 continua Full Art. IDs antigos são mantidos para preservar links compartilhados. Totens e Art Cards ficam de fora. O Ademais Full Art tem recorte explícito do quadro 1843 × 2552 para excluir uma inscrição externa ao quadro da carta; o original permanece intacto.
 - `data/rules.js`: resumos do manual com referências à numeração do leitor. PDF e cartas permanecem como fontes completas. Atropelar é uma palavra-chave, não uma regra geral de dano excedente.
-- `cartas.png/` e `Ilustraçoes/`: acervo original preservado apenas no computador, ignorado pelo Git. Não enviar os PNG/TIFF pesados. A galeria abre cópias WebP ampliadas, mantendo textos e créditos.
-- `manual/`: o PDF e o índice são publicados; as páginas PNG/JPG de trabalho ficam apenas no computador. A busca usa resumos revisados, não exibe OCR ruidoso como regra.
+- `cartas.png/` e `Ilustraçoes/`: acervo original, preservado. Imagens originais podem ser abertas pela galeria; créditos permanecem nas imagens.
+- `manual/`: PDF, páginas originais e OCR original. A busca usa resumos revisados, não exibe OCR ruidoso como regra.
 - `media/`: derivados WebP para publicação. Devem ser versionados; o site publicado não depende do Node ou do Sharp.
-- `media/cartas/thumbs/`: miniaturas 325 × 450 para listas, com seleção responsiva. `media/cartas/leitura/`: versões 1300 × 1800 carregadas apenas na ampliação. A versão intermediária continua 650 × 900.
-- `media/acervo/`: versões leves de **todas** as cartas e ilustrações, inclusive as que não estão na galeria pública. Ilustrações até 1600 × 1600 e cartas até 1300 × 1800, sem distorção; thumbs até 360 × 360. O manifesto registra correspondências e economia de bytes. Converter o acervo não adiciona Art Cards nem Totens à galeria.
-- `scripts/build-archive.mjs`: conversão sequencial com cache por data e parâmetros. Detecta o PDF salvo como Aerin fragmento.png e renderiza a primeira página localmente. Usa PDF.js e canvas apenas no desenvolvimento.
 - As cartas WebP são recortadas pelos limites do canal alpha e enquadradas em 650 × 900, sem esticar a arte. Bordas, textos e créditos são preservados; apenas margens totalmente transparentes são removidas. `scripts/inspect-cards.mjs` permite conferir os limites dos originais.
 - `lib/`: componentes da galeria e regras puras de montagem.
 - `scripts/`: geração de imagens e servidor local.
@@ -46,4 +43,4 @@ O leitor usa `manual_capa.png`, páginas 1–21 (a 11 é JPG) e gera `media/manu
 
 O montador guarda somente o rascunho no `localStorage` do próprio navegador. Bloqueio ou corrupção do armazenamento não impede o uso nem a exportação. Trocar de Escolhido remove cartas incompatíveis, mantendo as Neutras. Limpar o baralho exige confirmação por segundo clique. Importação inválida preserva o rascunho atual.
 
-Publique arquivos estáticos e mantenha `CNAME` e `.nojekyll` na raiz. Não publique `node_modules` nem os originais ignorados. Não é necessário build no servidor: um clone recebe os derivados prontos; para regenerá-los é preciso ter o acervo original local. As fontes são solicitadas ao Google Fonts, com fontes de sistema como alternativa; simulador e calculadora são serviços externos independentes. Nenhum deploy é feito pelos testes locais.
+Publique arquivos estáticos e mantenha `CNAME` e `.nojekyll` na raiz. Não publique `node_modules`. Não é necessário build no servidor. As fontes são solicitadas ao Google Fonts, com fontes de sistema como alternativa; simulador e calculadora são serviços externos independentes. Nenhum deploy é feito pelos testes locais.

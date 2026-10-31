@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { access, stat } from 'node:fs/promises';
+import { access } from 'node:fs/promises';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 import { cards, cardById, filterCards } from '../data/cards.js';
@@ -45,12 +45,7 @@ test('raridades e recursos não criam novas identidades nem vagas no baralho', (
 });
 test('imagens de coleção e Fragmentos existem, são WebP 650 × 900 e preservam originais', async () => {
   for (const entry of [...collectionVariants, ...fragments]) {
-    for (const [image, width, height] of [[entry.thumbnail,325,450],[entry.reading,1300,1800]]) {
-      assert.ok(image.startsWith('/media/'));
-      await access(new URL(`..${image}`, import.meta.url));
-      const meta = await sharp(fileURLToPath(new URL(`..${image}`, import.meta.url))).metadata();
-      assert.equal(meta.width,width,entry.id); assert.equal(meta.height,height,entry.id);
-    }
+    await access(new URL(`..${entry.original}`, import.meta.url));
     const meta = await sharp(fileURLToPath(new URL(`..${entry.image}`, import.meta.url))).metadata();
     assert.equal(meta.width, 650, entry.id); assert.equal(meta.height, 900, entry.id);
   }
@@ -60,10 +55,7 @@ test('Ademais Full Art ocupa o mesmo quadro das cartas, sem a inscrição extern
   const { data, info } = await sharp(fileURLToPath(new URL(`..${entry.image}`, import.meta.url))).ensureAlpha().raw().toBuffer({ resolveWithObject:true });
   const bounds = visibleBounds(data, info);
   assert.ok(bounds.width >= 648 && bounds.height >= 898, JSON.stringify(bounds));
-  const original = fileURLToPath(new URL(`..${entry.original}`, import.meta.url));
-  // Publication clones intentionally do not contain the local working masters.
-  try { await stat(original); } catch (error) { if (error.code === 'ENOENT') return; throw error; }
-  const source = sharp(original).extract(entry.crop);
+  const source = sharp(fileURLToPath(new URL(`..${entry.original}`, import.meta.url))).extract(entry.crop);
   const expected = await source.resize(650,900,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).webp({quality:85}).toBuffer();
   const actual = await sharp(fileURLToPath(new URL(`..${entry.image}`, import.meta.url))).raw().toBuffer();
   assert.deepEqual(actual, await sharp(expected).raw().toBuffer());

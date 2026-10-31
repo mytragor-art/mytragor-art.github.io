@@ -1,0 +1,16 @@
+import { setupDialog, setupFilters } from '../lib/gallery.js';
+import { galleryEntries, editions } from '../data/gallery.js';
+const filters = document.querySelector('.filters');
+const editionField = document.createElement('div'); editionField.className = 'field';
+const label = document.createElement('label'); label.htmlFor = 'editionFilter'; label.textContent = 'Edição / acabamento';
+const select = document.createElement('select'); select.id = 'editionFilter';
+select.add(new Option('Todas as edições', ''));
+editions.forEach(edition => select.add(new Option(edition, edition)));
+editionField.append(label, select); filters.querySelector('#resetFilters').before(editionField);
+document.querySelector('#typeFilter').add(new Option('Fragmento', 'Fragmento'));
+document.querySelector('.page-intro > p:last-child').textContent = 'Conheça as cartas e suas versões Padrão, Full Art, Prestígio e Promo, além dos Fragmentos. Filtre por edição, tipo ou filiação e amplie as imagens para apreciar a arte e seus créditos.';
+document.querySelector('.page-content > .notice').textContent = 'Full Art e Prestígio são versões da mesma carta. O montador usa a identidade base, sem duplicar o limite de cópias. Fragmentos são exibidos para consulta e não são adicionados às 40 cartas. As imagens mostram os acabamentos do acervo, sem simular efeitos físicos de impressão.';
+setupFilters({ source: () => galleryEntries });
+const open = setupDialog({ updateURL: true, collection: galleryEntries });
+const id = new URLSearchParams(location.search).get('carta');
+if (id) open(id);

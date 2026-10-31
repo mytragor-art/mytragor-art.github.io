@@ -1,0 +1,8 @@
+abrir-site.bat
+preview-mobile.svg
+node_modules/
+# Acervo de trabalho: preservado localmente, nunca enviado ao Pages.
+/Ilustraçoes/
+/cartas.png/
+/manual/*.png
+/manual/*.jpg

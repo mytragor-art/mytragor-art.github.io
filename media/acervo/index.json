@@ -1,0 +1,2002 @@
+{
+  "version": 1,
+  "parameters": {
+    "pdfRendering": "first-page-1600-v1",
+    "illustrations": {
+      "width": 1600,
+      "height": 1600
+    },
+    "cards": {
+      "width": 1300,
+      "height": 1800
+    },
+    "thumbnail": {
+      "width": 360,
+      "height": 360,
+      "quality": 72
+    },
+    "fit": "inside",
+    "withoutEnlargement": true,
+    "autoOrient": true,
+    "colourspace": "srgb",
+    "quality": 82
+  },
+  "entries": [
+    {
+      "source": "/Ilustraçoes/ADEMAIS FINAL.jpg",
+      "image": "/media/acervo/ilustracoes/ADEMAIS FINAL.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ADEMAIS FINAL.jpg.webp",
+      "width": 1600,
+      "height": 1156,
+      "bytes": 129596,
+      "thumbnailBytes": 11560,
+      "sourceBytes": 11215738
+    },
+    {
+      "source": "/Ilustraçoes/ADEMAIS.jpg",
+      "image": "/media/acervo/ilustracoes/ADEMAIS.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ADEMAIS.jpg.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 136382,
+      "thumbnailBytes": 12224,
+      "sourceBytes": 16856905
+    },
+    {
+      "source": "/Ilustraçoes/AERIN-FINAL.png",
+      "image": "/media/acervo/ilustracoes/AERIN-FINAL.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/AERIN-FINAL.png.webp",
+      "width": 1600,
+      "height": 1280,
+      "bytes": 136170,
+      "thumbnailBytes": 10890,
+      "sourceBytes": 24511046
+    },
+    {
+      "source": "/Ilustraçoes/ALERTA DE FUGA.jpg",
+      "image": "/media/acervo/ilustracoes/ALERTA DE FUGA.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ALERTA DE FUGA.jpg.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 142888,
+      "thumbnailBytes": 12856,
+      "sourceBytes": 15134183
+    },
+    {
+      "source": "/Ilustraçoes/Aerin fragmento.png",
+      "image": "/media/acervo/ilustracoes/Aerin fragmento.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Aerin fragmento.png.webp",
+      "width": 1132,
+      "height": 1600,
+      "bytes": 260228,
+      "thumbnailBytes": 14428,
+      "sourceBytes": 35501537
+    },
+    {
+      "source": "/Ilustraçoes/Ajuda-do-Povo_final.jpg",
+      "image": "/media/acervo/ilustracoes/Ajuda-do-Povo_final.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Ajuda-do-Povo_final.jpg.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 118356,
+      "thumbnailBytes": 11220,
+      "sourceBytes": 5900008
+    },
+    {
+      "source": "/Ilustraçoes/Aprendiz de Magia - by Gill Andrade.png",
+      "image": "/media/acervo/ilustracoes/Aprendiz de Magia - by Gill Andrade.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Aprendiz de Magia - by Gill Andrade.png.webp",
+      "width": 1600,
+      "height": 1230,
+      "bytes": 172052,
+      "thumbnailBytes": 17782,
+      "sourceBytes": 12974839
+    },
+    {
+      "source": "/Ilustraçoes/Arnold, o escudeiro- by Gill Andrade.png",
+      "image": "/media/acervo/ilustracoes/Arnold, o escudeiro- by Gill Andrade.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Arnold, o escudeiro- by Gill Andrade.png.webp",
+      "width": 1600,
+      "height": 1230,
+      "bytes": 98476,
+      "thumbnailBytes": 10772,
+      "sourceBytes": 12336540
+    },
+    {
+      "source": "/Ilustraçoes/Batedor - Final Render - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Batedor - Final Render - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Batedor - Final Render - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1228,
+      "bytes": 145596,
+      "thumbnailBytes": 11360,
+      "sourceBytes": 26326880
+    },
+    {
+      "source": "/Ilustraçoes/Bem Treinada.png",
+      "image": "/media/acervo/ilustracoes/Bem Treinada.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Bem Treinada.png.webp",
+      "width": 1600,
+      "height": 1209,
+      "bytes": 104750,
+      "thumbnailBytes": 10882,
+      "sourceBytes": 8365275
+    },
+    {
+      "source": "/Ilustraçoes/Bom Fruto - Render Final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Bom Fruto - Render Final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Bom Fruto - Render Final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1260,
+      "bytes": 181014,
+      "thumbnailBytes": 11358,
+      "sourceBytes": 53652349
+    },
+    {
+      "source": "/Ilustraçoes/CaminhosPerigosos-final.png",
+      "image": "/media/acervo/ilustracoes/CaminhosPerigosos-final.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/CaminhosPerigosos-final.png.webp",
+      "width": 1600,
+      "height": 1280,
+      "bytes": 94534,
+      "thumbnailBytes": 5484,
+      "sourceBytes": 51366108
+    },
+    {
+      "source": "/Ilustraçoes/Campos Ensanguentados - Mytragor-1.png",
+      "image": "/media/acervo/ilustracoes/Campos Ensanguentados - Mytragor-1.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Campos Ensanguentados - Mytragor-1.png.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 55770,
+      "thumbnailBytes": 5788,
+      "sourceBytes": 19068178
+    },
+    {
+      "source": "/Ilustraçoes/Charlatão da Vila - Mytragor TCG - Diogo Roesberg.png",
+      "image": "/media/acervo/ilustracoes/Charlatão da Vila - Mytragor TCG - Diogo Roesberg.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Charlatão da Vila - Mytragor TCG - Diogo Roesberg.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 103350,
+      "thumbnailBytes": 10332,
+      "sourceBytes": 36673978
+    },
+    {
+      "source": "/Ilustraçoes/Controle das Correntezas - Render final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Controle das Correntezas - Render final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Controle das Correntezas - Render final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1228,
+      "bytes": 245388,
+      "thumbnailBytes": 17654,
+      "sourceBytes": 29150414
+    },
+    {
+      "source": "/Ilustraçoes/Cão de caça Feroz - Diogo Roesberg.jpg",
+      "image": "/media/acervo/ilustracoes/Cão de caça Feroz - Diogo Roesberg.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Cão de caça Feroz - Diogo Roesberg.jpg.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 74306,
+      "thumbnailBytes": 5438,
+      "sourceBytes": 739431
+    },
+    {
+      "source": "/Ilustraçoes/Espionagem Sorrateira Final.png",
+      "image": "/media/acervo/ilustracoes/Espionagem Sorrateira Final.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Espionagem Sorrateira Final.png.webp",
+      "width": 1600,
+      "height": 1104,
+      "bytes": 123116,
+      "thumbnailBytes": 12254,
+      "sourceBytes": 20520924
+    },
+    {
+      "source": "/Ilustraçoes/Estudante arcano- by gill Andrade.png",
+      "image": "/media/acervo/ilustracoes/Estudante arcano- by gill Andrade.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Estudante arcano- by gill Andrade.png.webp",
+      "width": 1600,
+      "height": 1230,
+      "bytes": 149574,
+      "thumbnailBytes": 14932,
+      "sourceBytes": 10938200
+    },
+    {
+      "source": "/Ilustraçoes/Executor full arte - Mytragor - Katarina Banffy (1).png",
+      "image": "/media/acervo/ilustracoes/Executor full arte - Mytragor - Katarina Banffy (1).png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Executor full arte - Mytragor - Katarina Banffy (1).png.webp",
+      "width": 1132,
+      "height": 1600,
+      "bytes": 133748,
+      "thumbnailBytes": 10936,
+      "sourceBytes": 45634506
+    },
+    {
+      "source": "/Ilustraçoes/Executor-final-Bruno-Cavaretto.jpg",
+      "image": "/media/acervo/ilustracoes/Executor-final-Bruno-Cavaretto.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Executor-final-Bruno-Cavaretto.jpg.webp",
+      "width": 1600,
+      "height": 1209,
+      "bytes": 80236,
+      "thumbnailBytes": 8262,
+      "sourceBytes": 7190048
+    },
+    {
+      "source": "/Ilustraçoes/Fruto Abençoado - Render Final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Fruto Abençoado - Render Final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Fruto Abençoado - Render Final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 156762,
+      "thumbnailBytes": 12518,
+      "sourceBytes": 58536430
+    },
+    {
+      "source": "/Ilustraçoes/Gladiador Aposentadol.png",
+      "image": "/media/acervo/ilustracoes/Gladiador Aposentadol.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Gladiador Aposentadol.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 88970,
+      "thumbnailBytes": 8318,
+      "sourceBytes": 36985172
+    },
+    {
+      "source": "/Ilustraçoes/Gladiador Impenetrável.png",
+      "image": "/media/acervo/ilustracoes/Gladiador Impenetrável.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Gladiador Impenetrável.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 98198,
+      "thumbnailBytes": 8620,
+      "sourceBytes": 41213324
+    },
+    {
+      "source": "/Ilustraçoes/Gladiador Implacável.png",
+      "image": "/media/acervo/ilustracoes/Gladiador Implacável.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Gladiador Implacável.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 122304,
+      "thumbnailBytes": 9786,
+      "sourceBytes": 39561051
+    },
+    {
+      "source": "/Ilustraçoes/Gladiador Ousado.png",
+      "image": "/media/acervo/ilustracoes/Gladiador Ousado.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Gladiador Ousado.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 69166,
+      "thumbnailBytes": 7308,
+      "sourceBytes": 34424705
+    },
+    {
+      "source": "/Ilustraçoes/Gladiador Veloz.png",
+      "image": "/media/acervo/ilustracoes/Gladiador Veloz.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Gladiador Veloz.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 64836,
+      "thumbnailBytes": 6908,
+      "sourceBytes": 35676572
+    },
+    {
+      "source": "/Ilustraçoes/Hiena Carniceira - Diogo Roesberg.jpg",
+      "image": "/media/acervo/ilustracoes/Hiena Carniceira - Diogo Roesberg.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Hiena Carniceira - Diogo Roesberg.jpg.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 71482,
+      "thumbnailBytes": 6568,
+      "sourceBytes": 931867
+    },
+    {
+      "source": "/Ilustraçoes/Jabuti Barreira- Final - Katarina Banffy.jpg",
+      "image": "/media/acervo/ilustracoes/Jabuti Barreira- Final - Katarina Banffy.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Jabuti Barreira- Final - Katarina Banffy.jpg.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 263460,
+      "thumbnailBytes": 18018,
+      "sourceBytes": 42657303
+    },
+    {
+      "source": "/Ilustraçoes/Katsufull.jpg",
+      "image": "/media/acervo/ilustracoes/Katsufull.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Katsufull.jpg.webp",
+      "width": 1036,
+      "height": 1450,
+      "bytes": 364986,
+      "thumbnailBytes": 26610,
+      "sourceBytes": 581550
+    },
+    {
+      "source": "/Ilustraçoes/Leafae - Final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Leafae - Final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Leafae - Final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 152226,
+      "thumbnailBytes": 12160,
+      "sourceBytes": 63340496
+    },
+    {
+      "source": "/Ilustraçoes/Leafaefull.jpeg",
+      "image": "/media/acervo/ilustracoes/Leafaefull.jpeg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Leafaefull.jpeg.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 101152,
+      "thumbnailBytes": 9194,
+      "sourceBytes": 8830985
+    },
+    {
+      "source": "/Ilustraçoes/Manto RENDER.png",
+      "image": "/media/acervo/ilustracoes/Manto RENDER.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Manto RENDER.png.webp",
+      "width": 1600,
+      "height": 1168,
+      "bytes": 85406,
+      "thumbnailBytes": 8842,
+      "sourceBytes": 7930198
+    },
+    {
+      "source": "/Ilustraçoes/Miliciano da vila.png",
+      "image": "/media/acervo/ilustracoes/Miliciano da vila.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Miliciano da vila.png.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 81748,
+      "thumbnailBytes": 8392,
+      "sourceBytes": 10827619
+    },
+    {
+      "source": "/Ilustraçoes/Novato - RENDER FINAL - Guilherme Souza.jpg",
+      "image": "/media/acervo/ilustracoes/Novato - RENDER FINAL - Guilherme Souza.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Novato - RENDER FINAL - Guilherme Souza.jpg.webp",
+      "width": 1600,
+      "height": 1217,
+      "bytes": 127644,
+      "thumbnailBytes": 11332,
+      "sourceBytes": 3509211
+    },
+    {
+      "source": "/Ilustraçoes/ORBE render.png",
+      "image": "/media/acervo/ilustracoes/ORBE render.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ORBE render.png.webp",
+      "width": 1600,
+      "height": 1168,
+      "bytes": 81862,
+      "thumbnailBytes": 7986,
+      "sourceBytes": 7244363
+    },
+    {
+      "source": "/Ilustraçoes/Observadora Ilustração 3.png",
+      "image": "/media/acervo/ilustracoes/Observadora Ilustração 3.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Observadora Ilustração 3.png.webp",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 92456,
+      "thumbnailBytes": 8690,
+      "sourceBytes": 18136242
+    },
+    {
+      "source": "/Ilustraçoes/Pica-Pau Agulheiro - Final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Pica-Pau Agulheiro - Final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Pica-Pau Agulheiro - Final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 170996,
+      "thumbnailBytes": 17140,
+      "sourceBytes": 41052625
+    },
+    {
+      "source": "/Ilustraçoes/Porco Espinho Furioso - Mytragor - Diogo Roesberg.png",
+      "image": "/media/acervo/ilustracoes/Porco Espinho Furioso - Mytragor - Diogo Roesberg.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Porco Espinho Furioso - Mytragor - Diogo Roesberg.png.webp",
+      "width": 1147,
+      "height": 1600,
+      "bytes": 117286,
+      "thumbnailBytes": 10866,
+      "sourceBytes": 34564288
+    },
+    {
+      "source": "/Ilustraçoes/Porco Espinho Furioso RGB.tif",
+      "image": "/media/acervo/ilustracoes/Porco Espinho Furioso RGB.tif.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Porco Espinho Furioso RGB.tif.webp",
+      "width": 1145,
+      "height": 1600,
+      "bytes": 72886,
+      "thumbnailBytes": 6764,
+      "sourceBytes": 50672122
+    },
+    {
+      "source": "/Ilustraçoes/Protetor Final.jpg",
+      "image": "/media/acervo/ilustracoes/Protetor Final.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Protetor Final.jpg.webp",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 71410,
+      "thumbnailBytes": 6942,
+      "sourceBytes": 36588623
+    },
+    {
+      "source": "/Ilustraçoes/Protetor-Render.jpg",
+      "image": "/media/acervo/ilustracoes/Protetor-Render.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Protetor-Render.jpg.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 133384,
+      "thumbnailBytes": 12992,
+      "sourceBytes": 10462233
+    },
+    {
+      "source": "/Ilustraçoes/Quebra Aço.png",
+      "image": "/media/acervo/ilustracoes/Quebra Aço.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Quebra Aço.png.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 102764,
+      "thumbnailBytes": 9840,
+      "sourceBytes": 35021357
+    },
+    {
+      "source": "/Ilustraçoes/Rei Leao Sagrado.png",
+      "image": "/media/acervo/ilustracoes/Rei Leao Sagrado.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Rei Leao Sagrado.png.webp",
+      "width": 1600,
+      "height": 1131,
+      "bytes": 100336,
+      "thumbnailBytes": 9160,
+      "sourceBytes": 11242837
+    },
+    {
+      "source": "/Ilustraçoes/Tamanduá Guardião - Render FINAL - Guilherme Souza.jpg",
+      "image": "/media/acervo/ilustracoes/Tamanduá Guardião - Render FINAL - Guilherme Souza.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Tamanduá Guardião - Render FINAL - Guilherme Souza.jpg.webp",
+      "width": 1600,
+      "height": 1202,
+      "bytes": 149596,
+      "thumbnailBytes": 12034,
+      "sourceBytes": 25951792
+    },
+    {
+      "source": "/Ilustraçoes/Tempestade Arcana CMKY.png",
+      "image": "/media/acervo/ilustracoes/Tempestade Arcana CMKY.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Tempestade Arcana CMKY.png.webp",
+      "width": 1600,
+      "height": 1218,
+      "bytes": 185682,
+      "thumbnailBytes": 11204,
+      "sourceBytes": 29056798
+    },
+    {
+      "source": "/Ilustraçoes/Thorn full.png",
+      "image": "/media/acervo/ilustracoes/Thorn full.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Thorn full.png.webp",
+      "width": 1140,
+      "height": 1600,
+      "bytes": 155118,
+      "thumbnailBytes": 10824,
+      "sourceBytes": 9456505
+    },
+    {
+      "source": "/Ilustraçoes/Thorn, o Martelo da Montanha.jpg",
+      "image": "/media/acervo/ilustracoes/Thorn, o Martelo da Montanha.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Thorn, o Martelo da Montanha.jpg.webp",
+      "width": 1600,
+      "height": 1590,
+      "bytes": 101830,
+      "thumbnailBytes": 8482,
+      "sourceBytes": 6392172
+    },
+    {
+      "source": "/Ilustraçoes/Toupeira Escavadora - Final - Katarina Banffy.png",
+      "image": "/media/acervo/ilustracoes/Toupeira Escavadora - Final - Katarina Banffy.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Toupeira Escavadora - Final - Katarina Banffy.png.webp",
+      "width": 1600,
+      "height": 1600,
+      "bytes": 144452,
+      "thumbnailBytes": 12108,
+      "sourceBytes": 40231687
+    },
+    {
+      "source": "/Ilustraçoes/Yohan, Ronin Vigilante - Diogo Roesberg.jpg",
+      "image": "/media/acervo/ilustracoes/Yohan, Ronin Vigilante - Diogo Roesberg.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/Yohan, Ronin Vigilante - Diogo Roesberg.jpg.webp",
+      "width": 1600,
+      "height": 1212,
+      "bytes": 82846,
+      "thumbnailBytes": 6944,
+      "sourceBytes": 995363
+    },
+    {
+      "source": "/Ilustraçoes/ademais full.png",
+      "image": "/media/acervo/ilustracoes/ademais full.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ademais full.png.webp",
+      "width": 1155,
+      "height": 1600,
+      "bytes": 275178,
+      "thumbnailBytes": 18314,
+      "sourceBytes": 49128917
+    },
+    {
+      "source": "/Ilustraçoes/ademais prestigio.png",
+      "image": "/media/acervo/ilustracoes/ademais prestigio.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ademais prestigio.png.webp",
+      "width": 1600,
+      "height": 1538,
+      "bytes": 311718,
+      "thumbnailBytes": 26382,
+      "sourceBytes": 8623401
+    },
+    {
+      "source": "/Ilustraçoes/aranhasagiota2.jpg",
+      "image": "/media/acervo/ilustracoes/aranhasagiota2.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/aranhasagiota2.jpg.webp",
+      "width": 1600,
+      "height": 1202,
+      "bytes": 102954,
+      "thumbnailBytes": 9128,
+      "sourceBytes": 18069807
+    },
+    {
+      "source": "/Ilustraçoes/aranhasinformante.png",
+      "image": "/media/acervo/ilustracoes/aranhasinformante.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/aranhasinformante.png.webp",
+      "width": 1600,
+      "height": 1290,
+      "bytes": 160356,
+      "thumbnailBytes": 10922,
+      "sourceBytes": 35408878
+    },
+    {
+      "source": "/Ilustraçoes/aranhasmilicia2.png",
+      "image": "/media/acervo/ilustracoes/aranhasmilicia2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/aranhasmilicia2.png.webp",
+      "width": 1600,
+      "height": 1232,
+      "bytes": 183446,
+      "thumbnailBytes": 12848,
+      "sourceBytes": 63591298
+    },
+    {
+      "source": "/Ilustraçoes/bartolomeu2.jpg",
+      "image": "/media/acervo/ilustracoes/bartolomeu2.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/bartolomeu2.jpg.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 131744,
+      "thumbnailBytes": 10162,
+      "sourceBytes": 9429138
+    },
+    {
+      "source": "/Ilustraçoes/catedralEnsolarada-final.png",
+      "image": "/media/acervo/ilustracoes/catedralEnsolarada-final.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/catedralEnsolarada-final.png.webp",
+      "width": 1600,
+      "height": 1280,
+      "bytes": 185902,
+      "thumbnailBytes": 13564,
+      "sourceBytes": 51493796
+    },
+    {
+      "source": "/Ilustraçoes/cervo branco.png",
+      "image": "/media/acervo/ilustracoes/cervo branco.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/cervo branco.png.webp",
+      "width": 1600,
+      "height": 1246,
+      "bytes": 100916,
+      "thumbnailBytes": 8536,
+      "sourceBytes": 11481313
+    },
+    {
+      "source": "/Ilustraçoes/constrição 4.png",
+      "image": "/media/acervo/ilustracoes/constrição 4.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/constrição 4.png.webp",
+      "width": 1600,
+      "height": 1232,
+      "bytes": 232588,
+      "thumbnailBytes": 17344,
+      "sourceBytes": 107452469
+    },
+    {
+      "source": "/Ilustraçoes/emboscada2.png",
+      "image": "/media/acervo/ilustracoes/emboscada2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/emboscada2.png.webp",
+      "width": 1600,
+      "height": 1246,
+      "bytes": 149852,
+      "thumbnailBytes": 8328,
+      "sourceBytes": 12904953
+    },
+    {
+      "source": "/Ilustraçoes/gamboa full.png",
+      "image": "/media/acervo/ilustracoes/gamboa full.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/gamboa full.png.webp",
+      "width": 1143,
+      "height": 1600,
+      "bytes": 58518,
+      "thumbnailBytes": 5546,
+      "sourceBytes": 8493381
+    },
+    {
+      "source": "/Ilustraçoes/gamboasam.png",
+      "image": "/media/acervo/ilustracoes/gamboasam.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/gamboasam.png.webp",
+      "width": 1600,
+      "height": 1412,
+      "bytes": 161788,
+      "thumbnailBytes": 16116,
+      "sourceBytes": 16955199
+    },
+    {
+      "source": "/Ilustraçoes/goblinsabotador2.png",
+      "image": "/media/acervo/ilustracoes/goblinsabotador2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/goblinsabotador2.png.webp",
+      "width": 1600,
+      "height": 1132,
+      "bytes": 163274,
+      "thumbnailBytes": 12702,
+      "sourceBytes": 13470263
+    },
+    {
+      "source": "/Ilustraçoes/informante do beco final (2).png",
+      "image": "/media/acervo/ilustracoes/informante do beco final (2).png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/informante do beco final (2).png.webp",
+      "width": 1600,
+      "height": 1232,
+      "bytes": 324302,
+      "thumbnailBytes": 16164,
+      "sourceBytes": 80809232
+    },
+    {
+      "source": "/Ilustraçoes/interrupção perfeita card.jpg",
+      "image": "/media/acervo/ilustracoes/interrupção perfeita card.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/interrupção perfeita card.jpg.webp",
+      "width": 1600,
+      "height": 1155,
+      "bytes": 145994,
+      "thumbnailBytes": 12678,
+      "sourceBytes": 14176430
+    },
+    {
+      "source": "/Ilustraçoes/katsu prestigio.png",
+      "image": "/media/acervo/ilustracoes/katsu prestigio.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/katsu prestigio.png.webp",
+      "width": 1132,
+      "height": 1600,
+      "bytes": 134984,
+      "thumbnailBytes": 12948,
+      "sourceBytes": 7903251
+    },
+    {
+      "source": "/Ilustraçoes/katsu.png",
+      "image": "/media/acervo/ilustracoes/katsu.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/katsu.png.webp",
+      "width": 1600,
+      "height": 1280,
+      "bytes": 90098,
+      "thumbnailBytes": 7576,
+      "sourceBytes": 19286471
+    },
+    {
+      "source": "/Ilustraçoes/laminaCMYK.jpg",
+      "image": "/media/acervo/ilustracoes/laminaCMYK.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/laminaCMYK.jpg.webp",
+      "width": 1600,
+      "height": 1174,
+      "bytes": 51344,
+      "thumbnailBytes": 4552,
+      "sourceBytes": 8910205
+    },
+    {
+      "source": "/Ilustraçoes/leafae prestigio.PNG",
+      "image": "/media/acervo/ilustracoes/leafae prestigio.PNG.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/leafae prestigio.PNG.webp",
+      "width": 1600,
+      "height": 1354,
+      "bytes": 244068,
+      "thumbnailBytes": 25010,
+      "sourceBytes": 5912513
+    },
+    {
+      "source": "/Ilustraçoes/livroCMYK.jpg",
+      "image": "/media/acervo/ilustracoes/livroCMYK.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/livroCMYK.jpg.webp",
+      "width": 1600,
+      "height": 1169,
+      "bytes": 118714,
+      "thumbnailBytes": 10336,
+      "sourceBytes": 6463375
+    },
+    {
+      "source": "/Ilustraçoes/logo.png",
+      "image": "/media/acervo/ilustracoes/logo.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/logo.png.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 9146,
+      "thumbnailBytes": 788,
+      "sourceBytes": 53057
+    },
+    {
+      "source": "/Ilustraçoes/maosflamejantes2.png",
+      "image": "/media/acervo/ilustracoes/maosflamejantes2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/maosflamejantes2.png.webp",
+      "width": 1600,
+      "height": 1181,
+      "bytes": 68774,
+      "thumbnailBytes": 7024,
+      "sourceBytes": 3323544
+    },
+    {
+      "source": "/Ilustraçoes/mascote2.png",
+      "image": "/media/acervo/ilustracoes/mascote2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/mascote2.png.webp",
+      "width": 1600,
+      "height": 1181,
+      "bytes": 74782,
+      "thumbnailBytes": 6280,
+      "sourceBytes": 3853021
+    },
+    {
+      "source": "/Ilustraçoes/porco espinho furioso.png",
+      "image": "/media/acervo/ilustracoes/porco espinho furioso.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/porco espinho furioso.png.webp",
+      "width": 1600,
+      "height": 1400,
+      "bytes": 117904,
+      "thumbnailBytes": 11078,
+      "sourceBytes": 12931489
+    },
+    {
+      "source": "/Ilustraçoes/profanacao_terreno_final.png",
+      "image": "/media/acervo/ilustracoes/profanacao_terreno_final.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/profanacao_terreno_final.png.webp",
+      "width": 1600,
+      "height": 1280,
+      "bytes": 105986,
+      "thumbnailBytes": 7822,
+      "sourceBytes": 45025822
+    },
+    {
+      "source": "/Ilustraçoes/quelíceras2.png",
+      "image": "/media/acervo/ilustracoes/quelíceras2.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/quelíceras2.png.webp",
+      "width": 1600,
+      "height": 1168,
+      "bytes": 70158,
+      "thumbnailBytes": 7710,
+      "sourceBytes": 8370512
+    },
+    {
+      "source": "/Ilustraçoes/redoma santa final.png",
+      "image": "/media/acervo/ilustracoes/redoma santa final.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/redoma santa final.png.webp",
+      "width": 1600,
+      "height": 1232,
+      "bytes": 132598,
+      "thumbnailBytes": 11602,
+      "sourceBytes": 68953170
+    },
+    {
+      "source": "/Ilustraçoes/resgate (2).png",
+      "image": "/media/acervo/ilustracoes/resgate (2).png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/resgate (2).png.webp",
+      "width": 1600,
+      "height": 1209,
+      "bytes": 117986,
+      "thumbnailBytes": 11040,
+      "sourceBytes": 18625901
+    },
+    {
+      "source": "/Ilustraçoes/sede de vingança.jpg",
+      "image": "/media/acervo/ilustracoes/sede de vingança.jpg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/sede de vingança.jpg.webp",
+      "width": 1129,
+      "height": 1600,
+      "bytes": 130884,
+      "thumbnailBytes": 12650,
+      "sourceBytes": 1649177
+    },
+    {
+      "source": "/Ilustraçoes/sede.png",
+      "image": "/media/acervo/ilustracoes/sede.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/sede.png.webp",
+      "width": 1600,
+      "height": 1168,
+      "bytes": 96924,
+      "thumbnailBytes": 10154,
+      "sourceBytes": 6888120
+    },
+    {
+      "source": "/Ilustraçoes/tonicorevig.png",
+      "image": "/media/acervo/ilustracoes/tonicorevig.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/tonicorevig.png.webp",
+      "width": 1600,
+      "height": 1246,
+      "bytes": 219426,
+      "thumbnailBytes": 20204,
+      "sourceBytes": 15949379
+    },
+    {
+      "source": "/Ilustraçoes/troca de energia.png",
+      "image": "/media/acervo/ilustracoes/troca de energia.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/troca de energia.png.webp",
+      "width": 1600,
+      "height": 1228,
+      "bytes": 112544,
+      "thumbnailBytes": 11052,
+      "sourceBytes": 26883792
+    },
+    {
+      "source": "/Ilustraçoes/ursonegro.png",
+      "image": "/media/acervo/ilustracoes/ursonegro.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/ursonegro.png.webp",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 130352,
+      "thumbnailBytes": 13174,
+      "sourceBytes": 1982537
+    },
+    {
+      "source": "/Ilustraçoes/valbrak full art.png",
+      "image": "/media/acervo/ilustracoes/valbrak full art.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/valbrak full art.png.webp",
+      "width": 1146,
+      "height": 1600,
+      "bytes": 123852,
+      "thumbnailBytes": 8358,
+      "sourceBytes": 14872751
+    },
+    {
+      "source": "/Ilustraçoes/valbrak prestigio.png",
+      "image": "/media/acervo/ilustracoes/valbrak prestigio.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/valbrak prestigio.png.webp",
+      "width": 1600,
+      "height": 1414,
+      "bytes": 658708,
+      "thumbnailBytes": 55880,
+      "sourceBytes": 9241110
+    },
+    {
+      "source": "/Ilustraçoes/valbrak promo.jpeg",
+      "image": "/media/acervo/ilustracoes/valbrak promo.jpeg.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/valbrak promo.jpeg.webp",
+      "width": 1066,
+      "height": 1600,
+      "bytes": 239560,
+      "thumbnailBytes": 10960,
+      "sourceBytes": 11272366
+    },
+    {
+      "source": "/Ilustraçoes/valvrakvick.png",
+      "image": "/media/acervo/ilustracoes/valvrakvick.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/valvrakvick.png.webp",
+      "width": 1600,
+      "height": 1246,
+      "bytes": 220130,
+      "thumbnailBytes": 15908,
+      "sourceBytes": 19289769
+    },
+    {
+      "source": "/Ilustraçoes/xama.png",
+      "image": "/media/acervo/ilustracoes/xama.png.webp",
+      "thumbnail": "/media/acervo/ilustracoes/thumbs/xama.png.webp",
+      "width": 1600,
+      "height": 1228,
+      "bytes": 189976,
+      "thumbnailBytes": 15824,
+      "sourceBytes": 27792214
+    },
+    {
+      "source": "/cartas.png/Ademais prestigio.png",
+      "image": "/media/acervo/cartas/Ademais prestigio.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Ademais prestigio.png.webp",
+      "width": 1300,
+      "height": 1548,
+      "bytes": 128718,
+      "thumbnailBytes": 12866,
+      "sourceBytes": 3131072
+    },
+    {
+      "source": "/cartas.png/Ademais_fullart.png",
+      "image": "/media/acervo/cartas/Ademais_fullart.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Ademais_fullart.png.webp",
+      "width": 1300,
+      "height": 1508,
+      "bytes": 226504,
+      "thumbnailBytes": 19128,
+      "sourceBytes": 5148882
+    },
+    {
+      "source": "/cartas.png/Katsufull.png",
+      "image": "/media/acervo/cartas/Katsufull.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Katsufull.png.webp",
+      "width": 1300,
+      "height": 1643,
+      "bytes": 334314,
+      "thumbnailBytes": 22830,
+      "sourceBytes": 3600335
+    },
+    {
+      "source": "/cartas.png/Leafaefull.png",
+      "image": "/media/acervo/cartas/Leafaefull.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Leafaefull.png.webp",
+      "width": 1300,
+      "height": 1621,
+      "bytes": 154630,
+      "thumbnailBytes": 14562,
+      "sourceBytes": 4578363
+    },
+    {
+      "source": "/cartas.png/Thorn full.png",
+      "image": "/media/acervo/cartas/Thorn full.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Thorn full.png.webp",
+      "width": 1300,
+      "height": 1649,
+      "bytes": 166814,
+      "thumbnailBytes": 12176,
+      "sourceBytes": 4940863
+    },
+    {
+      "source": "/cartas.png/Valbrak prestígio.png",
+      "image": "/media/acervo/cartas/Valbrak prestígio.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Valbrak prestígio.png.webp",
+      "width": 1300,
+      "height": 1630,
+      "bytes": 201440,
+      "thumbnailBytes": 17340,
+      "sourceBytes": 3171745
+    },
+    {
+      "source": "/cartas.png/Valbrak_Full(versão1).png",
+      "image": "/media/acervo/cartas/Valbrak_Full(versão1).png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Valbrak_Full(versão1).png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 348218,
+      "thumbnailBytes": 21912,
+      "sourceBytes": 7277741
+    },
+    {
+      "source": "/cartas.png/Valbrak_Full(versão2).png",
+      "image": "/media/acervo/cartas/Valbrak_Full(versão2).png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Valbrak_Full(versão2).png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 288698,
+      "thumbnailBytes": 20212,
+      "sourceBytes": 6758821
+    },
+    {
+      "source": "/cartas.png/Valbrak_Full(versão3).png",
+      "image": "/media/acervo/cartas/Valbrak_Full(versão3).png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Valbrak_Full(versão3).png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 264290,
+      "thumbnailBytes": 17406,
+      "sourceBytes": 6724408
+    },
+    {
+      "source": "/cartas.png/Valbrak_Full(versão4).png",
+      "image": "/media/acervo/cartas/Valbrak_Full(versão4).png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/Valbrak_Full(versão4).png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 193414,
+      "thumbnailBytes": 14334,
+      "sourceBytes": 4857739
+    },
+    {
+      "source": "/cartas.png/art card Ademais.png",
+      "image": "/media/acervo/cartas/art card Ademais.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card Ademais.png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 266262,
+      "thumbnailBytes": 16112,
+      "sourceBytes": 5451541
+    },
+    {
+      "source": "/cartas.png/art card Aerin.png",
+      "image": "/media/acervo/cartas/art card Aerin.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card Aerin.png.webp",
+      "width": 1300,
+      "height": 949,
+      "bytes": 91232,
+      "thumbnailBytes": 10878,
+      "sourceBytes": 5122213
+    },
+    {
+      "source": "/cartas.png/art card Leafae.png",
+      "image": "/media/acervo/cartas/art card Leafae.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card Leafae.png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 122182,
+      "thumbnailBytes": 9852,
+      "sourceBytes": 4933100
+    },
+    {
+      "source": "/cartas.png/art card Thorn.png",
+      "image": "/media/acervo/cartas/art card Thorn.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card Thorn.png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 178936,
+      "thumbnailBytes": 11204,
+      "sourceBytes": 5462572
+    },
+    {
+      "source": "/cartas.png/art card Valbrak.png",
+      "image": "/media/acervo/cartas/art card Valbrak.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card Valbrak.png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 141492,
+      "thumbnailBytes": 9368,
+      "sourceBytes": 5145325
+    },
+    {
+      "source": "/cartas.png/art card catedral.png",
+      "image": "/media/acervo/cartas/art card catedral.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card catedral.png.webp",
+      "width": 1300,
+      "height": 966,
+      "bytes": 116654,
+      "thumbnailBytes": 12852,
+      "sourceBytes": 8273353
+    },
+    {
+      "source": "/cartas.png/art card charlatão.png",
+      "image": "/media/acervo/cartas/art card charlatão.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card charlatão.png.webp",
+      "width": 1300,
+      "height": 961,
+      "bytes": 78760,
+      "thumbnailBytes": 10636,
+      "sourceBytes": 5256766
+    },
+    {
+      "source": "/cartas.png/art card executor.png",
+      "image": "/media/acervo/cartas/art card executor.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card executor.png.webp",
+      "width": 1300,
+      "height": 966,
+      "bytes": 65232,
+      "thumbnailBytes": 8844,
+      "sourceBytes": 4927429
+    },
+    {
+      "source": "/cartas.png/art card katsu full.png",
+      "image": "/media/acervo/cartas/art card katsu full.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card katsu full.png.webp",
+      "width": 1286,
+      "height": 1800,
+      "bytes": 400732,
+      "thumbnailBytes": 22784,
+      "sourceBytes": 3827546
+    },
+    {
+      "source": "/cartas.png/art card pica-pau.png",
+      "image": "/media/acervo/cartas/art card pica-pau.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/art card pica-pau.png.webp",
+      "width": 1300,
+      "height": 966,
+      "bytes": 102756,
+      "thumbnailBytes": 13430,
+      "sourceBytes": 5213314
+    },
+    {
+      "source": "/cartas.png/executor full.png",
+      "image": "/media/acervo/cartas/executor full.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/executor full.png.webp",
+      "width": 1300,
+      "height": 1649,
+      "bytes": 146990,
+      "thumbnailBytes": 13370,
+      "sourceBytes": 4597823
+    },
+    {
+      "source": "/cartas.png/fragmento marcial Aerin.png",
+      "image": "/media/acervo/cartas/fragmento marcial Aerin.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/fragmento marcial Aerin.png.webp",
+      "width": 1299,
+      "height": 1800,
+      "bytes": 274264,
+      "thumbnailBytes": 13780,
+      "sourceBytes": 6327092
+    },
+    {
+      "source": "/cartas.png/full sededevinganca.png",
+      "image": "/media/acervo/cartas/full sededevinganca.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/full sededevinganca.png.webp",
+      "width": 1300,
+      "height": 1629,
+      "bytes": 158250,
+      "thumbnailBytes": 15304,
+      "sourceBytes": 4576455
+    },
+    {
+      "source": "/cartas.png/gamboa_Full.png",
+      "image": "/media/acervo/cartas/gamboa_Full.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/gamboa_Full.png.webp",
+      "width": 1300,
+      "height": 1649,
+      "bytes": 101728,
+      "thumbnailBytes": 10422,
+      "sourceBytes": 2867841
+    },
+    {
+      "source": "/cartas.png/katsu full PeB.png",
+      "image": "/media/acervo/cartas/katsu full PeB.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/katsu full PeB.png.webp",
+      "width": 1300,
+      "height": 1643,
+      "bytes": 312018,
+      "thumbnailBytes": 22226,
+      "sourceBytes": 3875191
+    },
+    {
+      "source": "/cartas.png/layout-Arnoldescudeiro.png",
+      "image": "/media/acervo/cartas/layout-Arnoldescudeiro.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Arnoldescudeiro.png.webp",
+      "width": 1300,
+      "height": 1567,
+      "bytes": 113742,
+      "thumbnailBytes": 12002,
+      "sourceBytes": 2376656
+    },
+    {
+      "source": "/cartas.png/layout-Executor.png",
+      "image": "/media/acervo/cartas/layout-Executor.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Executor.png.webp",
+      "width": 1300,
+      "height": 1623,
+      "bytes": 110910,
+      "thumbnailBytes": 11364,
+      "sourceBytes": 2662795
+    },
+    {
+      "source": "/cartas.png/layout-Gamboa.png",
+      "image": "/media/acervo/cartas/layout-Gamboa.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Gamboa.png.webp",
+      "width": 1300,
+      "height": 1219,
+      "bytes": 97008,
+      "thumbnailBytes": 11998,
+      "sourceBytes": 3365177
+    },
+    {
+      "source": "/cartas.png/layout-Hienacarniceira.png",
+      "image": "/media/acervo/cartas/layout-Hienacarniceira.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Hienacarniceira.png.webp",
+      "width": 1300,
+      "height": 1218,
+      "bytes": 72818,
+      "thumbnailBytes": 9336,
+      "sourceBytes": 2142049
+    },
+    {
+      "source": "/cartas.png/layout-Jabutibarreira.png",
+      "image": "/media/acervo/cartas/layout-Jabutibarreira.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Jabutibarreira.png.webp",
+      "width": 1300,
+      "height": 1633,
+      "bytes": 142180,
+      "thumbnailBytes": 12706,
+      "sourceBytes": 3388408
+    },
+    {
+      "source": "/cartas.png/layout-Queliceras.png",
+      "image": "/media/acervo/cartas/layout-Queliceras.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Queliceras.png.webp",
+      "width": 1300,
+      "height": 1539,
+      "bytes": 92634,
+      "thumbnailBytes": 10246,
+      "sourceBytes": 2177633
+    },
+    {
+      "source": "/cartas.png/layout-Toupeiraescavadora.png",
+      "image": "/media/acervo/cartas/layout-Toupeiraescavadora.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Toupeiraescavadora.png.webp",
+      "width": 1300,
+      "height": 1634,
+      "bytes": 123542,
+      "thumbnailBytes": 11440,
+      "sourceBytes": 3136951
+    },
+    {
+      "source": "/cartas.png/layout-Yohanronin.png",
+      "image": "/media/acervo/cartas/layout-Yohanronin.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-Yohanronin.png.webp",
+      "width": 1300,
+      "height": 1642,
+      "bytes": 104246,
+      "thumbnailBytes": 9892,
+      "sourceBytes": 1870319
+    },
+    {
+      "source": "/cartas.png/layout-aerinnieloyl.png",
+      "image": "/media/acervo/cartas/layout-aerinnieloyl.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-aerinnieloyl.png.webp",
+      "width": 1300,
+      "height": 1628,
+      "bytes": 136788,
+      "thumbnailBytes": 13034,
+      "sourceBytes": 2882978
+    },
+    {
+      "source": "/cartas.png/layout-agiota.png",
+      "image": "/media/acervo/cartas/layout-agiota.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-agiota.png.webp",
+      "width": 1300,
+      "height": 1219,
+      "bytes": 84902,
+      "thumbnailBytes": 10116,
+      "sourceBytes": 3144559
+    },
+    {
+      "source": "/cartas.png/layout-ajudapovo.png",
+      "image": "/media/acervo/cartas/layout-ajudapovo.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ajudapovo.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 105582,
+      "thumbnailBytes": 10774,
+      "sourceBytes": 2798942
+    },
+    {
+      "source": "/cartas.png/layout-ambiente-caminhos.png",
+      "image": "/media/acervo/cartas/layout-ambiente-caminhos.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ambiente-caminhos.png.webp",
+      "width": 1300,
+      "height": 1641,
+      "bytes": 85492,
+      "thumbnailBytes": 6996,
+      "sourceBytes": 3775909
+    },
+    {
+      "source": "/cartas.png/layout-ambiente-campos.png",
+      "image": "/media/acervo/cartas/layout-ambiente-campos.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ambiente-campos.png.webp",
+      "width": 1300,
+      "height": 1636,
+      "bytes": 72004,
+      "thumbnailBytes": 7314,
+      "sourceBytes": 2754233
+    },
+    {
+      "source": "/cartas.png/layout-ambiente-catedral.png",
+      "image": "/media/acervo/cartas/layout-ambiente-catedral.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ambiente-catedral.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 139778,
+      "thumbnailBytes": 11946,
+      "sourceBytes": 4079306
+    },
+    {
+      "source": "/cartas.png/layout-ambiente-tempestade.png",
+      "image": "/media/acervo/cartas/layout-ambiente-tempestade.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ambiente-tempestade.png.webp",
+      "width": 1300,
+      "height": 1590,
+      "bytes": 129234,
+      "thumbnailBytes": 10574,
+      "sourceBytes": 2749808
+    },
+    {
+      "source": "/cartas.png/layout-aprendizmagia.png",
+      "image": "/media/acervo/cartas/layout-aprendizmagia.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-aprendizmagia.png.webp",
+      "width": 1300,
+      "height": 1219,
+      "bytes": 89056,
+      "thumbnailBytes": 11520,
+      "sourceBytes": 2947641
+    },
+    {
+      "source": "/cartas.png/layout-aranhastoken.png",
+      "image": "/media/acervo/cartas/layout-aranhastoken.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-aranhastoken.png.webp",
+      "width": 1300,
+      "height": 1305,
+      "bytes": 77608,
+      "thumbnailBytes": 7512,
+      "sourceBytes": 3689125
+    },
+    {
+      "source": "/cartas.png/layout-bartolomeu.png",
+      "image": "/media/acervo/cartas/layout-bartolomeu.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-bartolomeu.png.webp",
+      "width": 1300,
+      "height": 1229,
+      "bytes": 94482,
+      "thumbnailBytes": 11678,
+      "sourceBytes": 4636808
+    },
+    {
+      "source": "/cartas.png/layout-batedorkobold.png",
+      "image": "/media/acervo/cartas/layout-batedorkobold.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-batedorkobold.png.webp",
+      "width": 1300,
+      "height": 1640,
+      "bytes": 120770,
+      "thumbnailBytes": 10542,
+      "sourceBytes": 3058706
+    },
+    {
+      "source": "/cartas.png/layout-bomfruto.png",
+      "image": "/media/acervo/cartas/layout-bomfruto.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-bomfruto.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 121056,
+      "thumbnailBytes": 10774,
+      "sourceBytes": 3697414
+    },
+    {
+      "source": "/cartas.png/layout-branco.png",
+      "image": "/media/acervo/cartas/layout-branco.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-branco.png.webp",
+      "width": 1300,
+      "height": 1800,
+      "bytes": 12126,
+      "thumbnailBytes": 1370,
+      "sourceBytes": 52940
+    },
+    {
+      "source": "/cartas.png/layout-caoferoz.png",
+      "image": "/media/acervo/cartas/layout-caoferoz.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-caoferoz.png.webp",
+      "width": 1300,
+      "height": 1219,
+      "bytes": 58588,
+      "thumbnailBytes": 6958,
+      "sourceBytes": 2109115
+    },
+    {
+      "source": "/cartas.png/layout-cervobranco.png",
+      "image": "/media/acervo/cartas/layout-cervobranco.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-cervobranco.png.webp",
+      "width": 1300,
+      "height": 1633,
+      "bytes": 107110,
+      "thumbnailBytes": 10418,
+      "sourceBytes": 2381781
+    },
+    {
+      "source": "/cartas.png/layout-charlataovila.png",
+      "image": "/media/acervo/cartas/layout-charlataovila.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-charlataovila.png.webp",
+      "width": 1300,
+      "height": 1214,
+      "bytes": 88570,
+      "thumbnailBytes": 11302,
+      "sourceBytes": 3274700
+    },
+    {
+      "source": "/cartas.png/layout-cidadaostoken.png",
+      "image": "/media/acervo/cartas/layout-cidadaostoken.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-cidadaostoken.png.webp",
+      "width": 1300,
+      "height": 1305,
+      "bytes": 98492,
+      "thumbnailBytes": 8946,
+      "sourceBytes": 4054129
+    },
+    {
+      "source": "/cartas.png/layout-constricao.png",
+      "image": "/media/acervo/cartas/layout-constricao.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-constricao.png.webp",
+      "width": 1294,
+      "height": 1800,
+      "bytes": 182540,
+      "thumbnailBytes": 12808,
+      "sourceBytes": 3401522
+    },
+    {
+      "source": "/cartas.png/layout-controlecorrenteza.png",
+      "image": "/media/acervo/cartas/layout-controlecorrenteza.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-controlecorrenteza.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 151516,
+      "thumbnailBytes": 11934,
+      "sourceBytes": 3655328
+    },
+    {
+      "source": "/cartas.png/layout-escolhido_Ademais.png",
+      "image": "/media/acervo/cartas/layout-escolhido_Ademais.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-escolhido_Ademais.png.webp",
+      "width": 1300,
+      "height": 1630,
+      "bytes": 151548,
+      "thumbnailBytes": 14472,
+      "sourceBytes": 2820947
+    },
+    {
+      "source": "/cartas.png/layout-escolhido_katsuvingador.png",
+      "image": "/media/acervo/cartas/layout-escolhido_katsuvingador.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-escolhido_katsuvingador.png.webp",
+      "width": 1300,
+      "height": 1646,
+      "bytes": 123930,
+      "thumbnailBytes": 12112,
+      "sourceBytes": 2478593
+    },
+    {
+      "source": "/cartas.png/layout-escolhido_leafaefloresta.png",
+      "image": "/media/acervo/cartas/layout-escolhido_leafaefloresta.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-escolhido_leafaefloresta.png.webp",
+      "width": 1300,
+      "height": 1625,
+      "bytes": 166590,
+      "thumbnailBytes": 15502,
+      "sourceBytes": 3363605
+    },
+    {
+      "source": "/cartas.png/layout-escolhido_valbrak.png",
+      "image": "/media/acervo/cartas/layout-escolhido_valbrak.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-escolhido_valbrak.png.webp",
+      "width": 1300,
+      "height": 1636,
+      "bytes": 178702,
+      "thumbnailBytes": 15046,
+      "sourceBytes": 3318559
+    },
+    {
+      "source": "/cartas.png/layout-espionagemsorrateira.png",
+      "image": "/media/acervo/cartas/layout-espionagemsorrateira.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-espionagemsorrateira.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 126850,
+      "thumbnailBytes": 11894,
+      "sourceBytes": 2560274
+    },
+    {
+      "source": "/cartas.png/layout-estudantearcano.png",
+      "image": "/media/acervo/cartas/layout-estudantearcano.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-estudantearcano.png.webp",
+      "width": 1300,
+      "height": 1217,
+      "bytes": 98562,
+      "thumbnailBytes": 12492,
+      "sourceBytes": 2834800
+    },
+    {
+      "source": "/cartas.png/layout-fragmento_arcano.png",
+      "image": "/media/acervo/cartas/layout-fragmento_arcano.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-fragmento_arcano.png.webp",
+      "width": 1294,
+      "height": 1800,
+      "bytes": 45960,
+      "thumbnailBytes": 4898,
+      "sourceBytes": 1003243
+    },
+    {
+      "source": "/cartas.png/layout-fragmento_marcial.png",
+      "image": "/media/acervo/cartas/layout-fragmento_marcial.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-fragmento_marcial.png.webp",
+      "width": 1294,
+      "height": 1800,
+      "bytes": 33618,
+      "thumbnailBytes": 4436,
+      "sourceBytes": 139061
+    },
+    {
+      "source": "/cartas.png/layout-fragmento_religioso.png",
+      "image": "/media/acervo/cartas/layout-fragmento_religioso.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-fragmento_religioso.png.webp",
+      "width": 1295,
+      "height": 1800,
+      "bytes": 32872,
+      "thumbnailBytes": 3706,
+      "sourceBytes": 1152109
+    },
+    {
+      "source": "/cartas.png/layout-fragmento_sombras.png",
+      "image": "/media/acervo/cartas/layout-fragmento_sombras.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-fragmento_sombras.png.webp",
+      "width": 1294,
+      "height": 1800,
+      "bytes": 33276,
+      "thumbnailBytes": 3954,
+      "sourceBytes": 799309
+    },
+    {
+      "source": "/cartas.png/layout-frutoabencoadoai.png",
+      "image": "/media/acervo/cartas/layout-frutoabencoadoai.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-frutoabencoadoai.png.webp",
+      "width": 1300,
+      "height": 1628,
+      "bytes": 108934,
+      "thumbnailBytes": 10644,
+      "sourceBytes": 3445859
+    },
+    {
+      "source": "/cartas.png/layout-gladiadoraposentado.png",
+      "image": "/media/acervo/cartas/layout-gladiadoraposentado.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-gladiadoraposentado.png.webp",
+      "width": 1300,
+      "height": 1215,
+      "bytes": 58742,
+      "thumbnailBytes": 7462,
+      "sourceBytes": 2681514
+    },
+    {
+      "source": "/cartas.png/layout-gladiadorimpenetravel.png",
+      "image": "/media/acervo/cartas/layout-gladiadorimpenetravel.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-gladiadorimpenetravel.png.webp",
+      "width": 1300,
+      "height": 1632,
+      "bytes": 122188,
+      "thumbnailBytes": 12006,
+      "sourceBytes": 2741809
+    },
+    {
+      "source": "/cartas.png/layout-gladiadorimplacavel.png",
+      "image": "/media/acervo/cartas/layout-gladiadorimplacavel.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-gladiadorimplacavel.png.webp",
+      "width": 1300,
+      "height": 1632,
+      "bytes": 134510,
+      "thumbnailBytes": 12762,
+      "sourceBytes": 3122635
+    },
+    {
+      "source": "/cartas.png/layout-gladiadorousado.png",
+      "image": "/media/acervo/cartas/layout-gladiadorousado.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-gladiadorousado.png.webp",
+      "width": 1300,
+      "height": 1215,
+      "bytes": 68326,
+      "thumbnailBytes": 8924,
+      "sourceBytes": 3022870
+    },
+    {
+      "source": "/cartas.png/layout-gladiadorveloz.png",
+      "image": "/media/acervo/cartas/layout-gladiadorveloz.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-gladiadorveloz.png.webp",
+      "width": 1300,
+      "height": 1641,
+      "bytes": 91730,
+      "thumbnailBytes": 9604,
+      "sourceBytes": 2425827
+    },
+    {
+      "source": "/cartas.png/layout-goblinsabotador.png",
+      "image": "/media/acervo/cartas/layout-goblinsabotador.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-goblinsabotador.png.webp",
+      "width": 1300,
+      "height": 1215,
+      "bytes": 95672,
+      "thumbnailBytes": 10826,
+      "sourceBytes": 3805602
+    },
+    {
+      "source": "/cartas.png/layout-informante.png",
+      "image": "/media/acervo/cartas/layout-informante.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-informante.png.webp",
+      "width": 1300,
+      "height": 1557,
+      "bytes": 128534,
+      "thumbnailBytes": 11476,
+      "sourceBytes": 2919122
+    },
+    {
+      "source": "/cartas.png/layout-informantebeco.png",
+      "image": "/media/acervo/cartas/layout-informantebeco.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-informantebeco.png.webp",
+      "width": 1300,
+      "height": 1311,
+      "bytes": 143102,
+      "thumbnailBytes": 11574,
+      "sourceBytes": 4113838
+    },
+    {
+      "source": "/cartas.png/layout-interrupção.png",
+      "image": "/media/acervo/cartas/layout-interrupção.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-interrupção.png.webp",
+      "width": 1300,
+      "height": 1696,
+      "bytes": 129112,
+      "thumbnailBytes": 10974,
+      "sourceBytes": 3220333
+    },
+    {
+      "source": "/cartas.png/layout-invasaocativeiro.png",
+      "image": "/media/acervo/cartas/layout-invasaocativeiro.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-invasaocativeiro.png.webp",
+      "width": 1300,
+      "height": 1609,
+      "bytes": 106280,
+      "thumbnailBytes": 10450,
+      "sourceBytes": 3127071
+    },
+    {
+      "source": "/cartas.png/layout-laminaserrilhada.png",
+      "image": "/media/acervo/cartas/layout-laminaserrilhada.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-laminaserrilhada.png.webp",
+      "width": 1300,
+      "height": 1631,
+      "bytes": 66276,
+      "thumbnailBytes": 6496,
+      "sourceBytes": 2887065
+    },
+    {
+      "source": "/cartas.png/layout-leãoreibarreira.png",
+      "image": "/media/acervo/cartas/layout-leãoreibarreira.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-leãoreibarreira.png.webp",
+      "width": 1300,
+      "height": 1633,
+      "bytes": 129424,
+      "thumbnailBytes": 13540,
+      "sourceBytes": 2787038
+    },
+    {
+      "source": "/cartas.png/layout-livroarcanoinstavel.png",
+      "image": "/media/acervo/cartas/layout-livroarcanoinstavel.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-livroarcanoinstavel.png.webp",
+      "width": 1300,
+      "height": 1648,
+      "bytes": 125406,
+      "thumbnailBytes": 11648,
+      "sourceBytes": 3177915
+    },
+    {
+      "source": "/cartas.png/layout-magia_bemtreinado.jpg",
+      "image": "/media/acervo/cartas/layout-magia_bemtreinado.jpg.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-magia_bemtreinado.jpg.webp",
+      "width": 1300,
+      "height": 1799,
+      "bytes": 117864,
+      "thumbnailBytes": 10272,
+      "sourceBytes": 1295787
+    },
+    {
+      "source": "/cartas.png/layout-magia_bemtreinado.png",
+      "image": "/media/acervo/cartas/layout-magia_bemtreinado.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-magia_bemtreinado.png.webp",
+      "width": 1300,
+      "height": 1643,
+      "bytes": 121744,
+      "thumbnailBytes": 11952,
+      "sourceBytes": 2488431
+    },
+    {
+      "source": "/cartas.png/layout-magia_quebraaco.png",
+      "image": "/media/acervo/cartas/layout-magia_quebraaco.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-magia_quebraaco.png.webp",
+      "width": 1300,
+      "height": 1613,
+      "bytes": 87366,
+      "thumbnailBytes": 8014,
+      "sourceBytes": 2896141
+    },
+    {
+      "source": "/cartas.png/layout-mantocouro.png",
+      "image": "/media/acervo/cartas/layout-mantocouro.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-mantocouro.png.webp",
+      "width": 1300,
+      "height": 1616,
+      "bytes": 83562,
+      "thumbnailBytes": 8754,
+      "sourceBytes": 2596509
+    },
+    {
+      "source": "/cartas.png/layout-maosflamejantes.png",
+      "image": "/media/acervo/cartas/layout-maosflamejantes.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-maosflamejantes.png.webp",
+      "width": 1300,
+      "height": 1535,
+      "bytes": 72416,
+      "thumbnailBytes": 8428,
+      "sourceBytes": 2015198
+    },
+    {
+      "source": "/cartas.png/layout-mascota.png",
+      "image": "/media/acervo/cartas/layout-mascota.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-mascota.png.webp",
+      "width": 1300,
+      "height": 1557,
+      "bytes": 98390,
+      "thumbnailBytes": 9762,
+      "sourceBytes": 2056465
+    },
+    {
+      "source": "/cartas.png/layout-milicia.png",
+      "image": "/media/acervo/cartas/layout-milicia.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-milicia.png.webp",
+      "width": 1295,
+      "height": 1800,
+      "bytes": 163914,
+      "thumbnailBytes": 11418,
+      "sourceBytes": 2819263
+    },
+    {
+      "source": "/cartas.png/layout-milicianovila.png",
+      "image": "/media/acervo/cartas/layout-milicianovila.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-milicianovila.png.webp",
+      "width": 1300,
+      "height": 1631,
+      "bytes": 88298,
+      "thumbnailBytes": 8604,
+      "sourceBytes": 2696293
+    },
+    {
+      "source": "/cartas.png/layout-novato.png",
+      "image": "/media/acervo/cartas/layout-novato.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-novato.png.webp",
+      "width": 1300,
+      "height": 1219,
+      "bytes": 70912,
+      "thumbnailBytes": 8626,
+      "sourceBytes": 3141129
+    },
+    {
+      "source": "/cartas.png/layout-observadora.png",
+      "image": "/media/acervo/cartas/layout-observadora.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-observadora.png.webp",
+      "width": 1300,
+      "height": 1640,
+      "bytes": 132826,
+      "thumbnailBytes": 12458,
+      "sourceBytes": 2032366
+    },
+    {
+      "source": "/cartas.png/layout-orbeabsorcao.png",
+      "image": "/media/acervo/cartas/layout-orbeabsorcao.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-orbeabsorcao.png.webp",
+      "width": 1300,
+      "height": 1633,
+      "bytes": 109836,
+      "thumbnailBytes": 10606,
+      "sourceBytes": 2302437
+    },
+    {
+      "source": "/cartas.png/layout-ousado.png",
+      "image": "/media/acervo/cartas/layout-ousado.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ousado.png.webp",
+      "width": 1300,
+      "height": 1215,
+      "bytes": 68094,
+      "thumbnailBytes": 8852,
+      "sourceBytes": 3018562
+    },
+    {
+      "source": "/cartas.png/layout-picapau.png",
+      "image": "/media/acervo/cartas/layout-picapau.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-picapau.png.webp",
+      "width": 1300,
+      "height": 1632,
+      "bytes": 137956,
+      "thumbnailBytes": 13618,
+      "sourceBytes": 3358114
+    },
+    {
+      "source": "/cartas.png/layout-porcoespinho.png",
+      "image": "/media/acervo/cartas/layout-porcoespinho.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-porcoespinho.png.webp",
+      "width": 1300,
+      "height": 1632,
+      "bytes": 136000,
+      "thumbnailBytes": 13200,
+      "sourceBytes": 2434799
+    },
+    {
+      "source": "/cartas.png/layout-profanacaoterreno.png",
+      "image": "/media/acervo/cartas/layout-profanacaoterreno.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-profanacaoterreno.png.webp",
+      "width": 1300,
+      "height": 1651,
+      "bytes": 83232,
+      "thumbnailBytes": 6874,
+      "sourceBytes": 3660538
+    },
+    {
+      "source": "/cartas.png/layout-protetor.png",
+      "image": "/media/acervo/cartas/layout-protetor.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-protetor.png.webp",
+      "width": 1300,
+      "height": 1211,
+      "bytes": 94754,
+      "thumbnailBytes": 12190,
+      "sourceBytes": 3275416
+    },
+    {
+      "source": "/cartas.png/layout-redomasanta.png",
+      "image": "/media/acervo/cartas/layout-redomasanta.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-redomasanta.png.webp",
+      "width": 1298,
+      "height": 1800,
+      "bytes": 136768,
+      "thumbnailBytes": 11550,
+      "sourceBytes": 2746798
+    },
+    {
+      "source": "/cartas.png/layout-sedevinganca.png",
+      "image": "/media/acervo/cartas/layout-sedevinganca.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-sedevinganca.png.webp",
+      "width": 1300,
+      "height": 1647,
+      "bytes": 117132,
+      "thumbnailBytes": 11352,
+      "sourceBytes": 2254606
+    },
+    {
+      "source": "/cartas.png/layout-tamandua.png",
+      "image": "/media/acervo/cartas/layout-tamandua.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-tamandua.png.webp",
+      "width": 1300,
+      "height": 1633,
+      "bytes": 134532,
+      "thumbnailBytes": 12536,
+      "sourceBytes": 3185795
+    },
+    {
+      "source": "/cartas.png/layout-thornmontanha.png",
+      "image": "/media/acervo/cartas/layout-thornmontanha.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-thornmontanha.png.webp",
+      "width": 1300,
+      "height": 1631,
+      "bytes": 103058,
+      "thumbnailBytes": 9792,
+      "sourceBytes": 3250441
+    },
+    {
+      "source": "/cartas.png/layout-tonicorevigorante.png",
+      "image": "/media/acervo/cartas/layout-tonicorevigorante.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-tonicorevigorante.png.webp",
+      "width": 1300,
+      "height": 1626,
+      "bytes": 152984,
+      "thumbnailBytes": 13506,
+      "sourceBytes": 3495741
+    },
+    {
+      "source": "/cartas.png/layout-trocaenergia.png",
+      "image": "/media/acervo/cartas/layout-trocaenergia.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-trocaenergia.png.webp",
+      "width": 1300,
+      "height": 1637,
+      "bytes": 111478,
+      "thumbnailBytes": 11134,
+      "sourceBytes": 3441369
+    },
+    {
+      "source": "/cartas.png/layout-truque_alertadefuga.png",
+      "image": "/media/acervo/cartas/layout-truque_alertadefuga.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-truque_alertadefuga.png.webp",
+      "width": 1300,
+      "height": 1645,
+      "bytes": 127980,
+      "thumbnailBytes": 11064,
+      "sourceBytes": 2332079
+    },
+    {
+      "source": "/cartas.png/layout-truque_emboscada.png",
+      "image": "/media/acervo/cartas/layout-truque_emboscada.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-truque_emboscada.png.webp",
+      "width": 1300,
+      "height": 1588,
+      "bytes": 120034,
+      "thumbnailBytes": 9306,
+      "sourceBytes": 3027286
+    },
+    {
+      "source": "/cartas.png/layout-truque_interrupçãoperfeita.png",
+      "image": "/media/acervo/cartas/layout-truque_interrupçãoperfeita.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-truque_interrupçãoperfeita.png.webp",
+      "width": 1300,
+      "height": 1696,
+      "bytes": 129582,
+      "thumbnailBytes": 11084,
+      "sourceBytes": 3224156
+    },
+    {
+      "source": "/cartas.png/layout-ursonegro.png",
+      "image": "/media/acervo/cartas/layout-ursonegro.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-ursonegro.png.webp",
+      "width": 1300,
+      "height": 1634,
+      "bytes": 120236,
+      "thumbnailBytes": 9104,
+      "sourceBytes": 2616337
+    },
+    {
+      "source": "/cartas.png/layout-xamakobold.png",
+      "image": "/media/acervo/cartas/layout-xamakobold.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/layout-xamakobold.png.webp",
+      "width": 1300,
+      "height": 1640,
+      "bytes": 161694,
+      "thumbnailBytes": 13738,
+      "sourceBytes": 3247023
+    },
+    {
+      "source": "/cartas.png/leafae prestigio.png",
+      "image": "/media/acervo/cartas/leafae prestigio.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/leafae prestigio.png.webp",
+      "width": 1300,
+      "height": 1575,
+      "bytes": 153978,
+      "thumbnailBytes": 15826,
+      "sourceBytes": 2645152
+    },
+    {
+      "source": "/cartas.png/picapaudourado2.png",
+      "image": "/media/acervo/cartas/picapaudourado2.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/picapaudourado2.png.webp",
+      "width": 1300,
+      "height": 1626,
+      "bytes": 181582,
+      "thumbnailBytes": 19840,
+      "sourceBytes": 1245911
+    },
+    {
+      "source": "/cartas.png/porco-espinho full.Diogo.png",
+      "image": "/media/acervo/cartas/porco-espinho full.Diogo.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/porco-espinho full.Diogo.png.webp",
+      "width": 1300,
+      "height": 1649,
+      "bytes": 157820,
+      "thumbnailBytes": 15440,
+      "sourceBytes": 4920993
+    },
+    {
+      "source": "/cartas.png/prestigio katsu.png",
+      "image": "/media/acervo/cartas/prestigio katsu.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/prestigio katsu.png.webp",
+      "width": 1300,
+      "height": 1711,
+      "bytes": 133366,
+      "thumbnailBytes": 11966,
+      "sourceBytes": 2519538
+    },
+    {
+      "source": "/cartas.png/protetor full.png",
+      "image": "/media/acervo/cartas/protetor full.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/protetor full.png.webp",
+      "width": 1300,
+      "height": 1626,
+      "bytes": 122814,
+      "thumbnailBytes": 11924,
+      "sourceBytes": 6611850
+    },
+    {
+      "source": "/cartas.png/verniz.png",
+      "image": "/media/acervo/cartas/verniz.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/verniz.png.webp",
+      "width": 1300,
+      "height": 1698,
+      "bytes": 5940,
+      "thumbnailBytes": 572,
+      "sourceBytes": 28755
+    },
+    {
+      "source": "/cartas.png/versus carta.png",
+      "image": "/media/acervo/cartas/versus carta.png.webp",
+      "thumbnail": "/media/acervo/cartas/thumbs/versus carta.png.webp",
+      "width": 1300,
+      "height": 1799,
+      "bytes": 150972,
+      "thumbnailBytes": 8836,
+      "sourceBytes": 10995547
+    }
+  ],
+  "totals": {
+    "count": 197,
+    "bytes": 26610762,
+    "thumbnailBytes": 2298050,
+    "sourceBytes": 2407192883
+  }
+}

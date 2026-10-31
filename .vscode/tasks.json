@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Prévia Mytragor",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"start"
+			],
+			"windows": {
+				"command": "npm.cmd"
+			},
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Testar Mytragor",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"test"
+			],
+			"windows": {
+				"command": "npm.cmd"
+			},
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Inspecionar margens das cartas",
+			"type": "shell",
+			"command": "& 'C:\\Program Files\\nodejs\\node.exe' scripts/inspect-cards.mjs",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Gerar imagens Mytragor",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"assets"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

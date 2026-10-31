@@ -4,83 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#241416">
-  <meta name="description" content="Mytragor: conheça o jogo, consulte as regras e prepare-se para a batalha.">
-  <title>Mytragor | Estratégia, cartas e conquista</title>
+  <meta name="description" content="Conheça Mytragor, o card game brasileiro nascido das mesas de RPG. Escolha seu Escolhido, descubra as cartas e aprenda a jogar.">
+  <meta property="og:title" content="Mytragor — Seu fragmento. Sua história.">
+  <meta property="og:description" content="Um mundo nascido do RPG. Um duelo decidido por você. Conheça as cartas e comece sua jornada.">
+  <meta property="og:image" content="https://mytragor.com.br/media/mundo.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="canonical" href="https://mytragor.com.br/">
+  <title>Mytragor | Seu fragmento. Sua história.</title>
   <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header">
-    <a class="site-brand" href="/" aria-label="Mytragor - início">
-      <img src="/assets/logo-dourado.png" alt="Mytragor">
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainMenu">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Abrir menu</span>
-    </button>
-    <nav class="main-menu" id="mainMenu" aria-label="Menu principal">
-      <a aria-current="page" href="/">Início</a>
-      <a href="/comojogar/">Como jogar</a>
-      <a href="https://mytragor-battle-sim.vercel.app/index.html">Simulador</a>
-      <a href="http://mytragor.com.br/calculadora-mytragor/">Calculadora</a>
-      <a href="#comunidade">Comunidade</a>
-    </nav>
+    <a class="site-brand" href="/" aria-label="Mytragor — início"><img class="brand-logo" src="/media/logo-mytragor.webp" alt="Mytragor" width="392" height="82"><span class="brand-subtitle">CARD GAME</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav class="main-menu" id="mainMenu" aria-label="Menu principal"><a href="/#jogo">O jogo</a><a href="/cartas/">Cartas</a><a href="/comojogar/">Como jogar</a><a href="/baralho/">Meu baralho</a><a href="/#universo">Universo</a><a class="nav-cta" href="/simuladordebatalha/">Jogar online ↗</a></nav>
   </header>
-
-  <main>
+  <main id="conteudo">
     <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-copy">
-        <p class="eyebrow">Jogo de cartas estratégico</p>
-        <h1 id="heroTitle">Mytragor</h1>
-        <p class="hero-text">Convoque aliados, domine os fragmentos e escreva sua história em batalhas onde cada decisão muda o destino.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="/comojogar/">Aprenda a jogar</a>
-          <a class="button secondary" href="https://mytragor-battle-sim.vercel.app/index.html">Abrir simulador</a>
-        </div>
-      </div>
-      <a class="manual-preview" href="/comojogar/" aria-label="Abrir Como jogar Mytragor">
-        <img src="/assets/manual_capa.png" alt="Capa do manual Como Jogar Mytragor">
-      </a>
+      <div class="hero-copy"><p class="eyebrow">Card game brasileiro · Inspirado em RPG</p><h1 id="heroTitle">Seu fragmento.<br><em>Sua história.</em></h1><p class="hero-text">O poder dos Titãs vive em você. Escolha seu Escolhido, reúna aliados e transforme cada carta em uma nova possibilidade.</p><div class="hero-actions"><a class="button primary" href="/comojogar/">Comece sua jornada →</a><a class="button secondary" href="/simuladordebatalha/">Experimente o simulador ↗</a></div><div class="hero-facts"><span><strong>2</strong> jogadores</span><span><strong>40</strong> cartas no baralho</span><span><strong>1</strong> Escolhido para liderar</span></div></div>
+      <div class="hero-cards hero-cards--complete" aria-label="Conheça os quatro Escolhidos de Mytragor">
+        <a class="hero-card card-left" href="/cartas/?carta=escolhido_katsuvingador" aria-label="Conhecer Katsu, o Vingador"><img src="/media/cartas/layout-escolhido_katsuvingador.webp" alt="Carta Katsu, o Vingador, Escolhido Marcial" width="650" height="900"></a>
+        <a class="hero-card card-right" href="/cartas/?carta=escolhido_Ademais" aria-label="Conhecer Ademais, Aranhas Negras"><img src="/media/cartas/layout-escolhido_Ademais.webp" alt="Carta Ademais, Aranhas Negras, Escolhido Sombras" width="650" height="900"></a>
+        <a class="hero-card card-front" href="/cartas/?carta=escolhido_valbrak" aria-label="Conhecer Valbrak, o Mago Popular"><img src="/media/cartas/layout-escolhido_valbrak.webp" alt="Carta Valbrak, o Mago Popular, Escolhido Arcano" width="650" height="900" fetchpriority="high"></a>
+        <a class="hero-card card-leafae" href="/cartas/?carta=escolhido_leafaefloresta" aria-label="Conhecer Leafae, o Guardião da Floresta"><img src="/media/cartas/layout-escolhido_leafaefloresta.webp" alt="Carta Leafae, o Guardião da Floresta, Escolhido Religioso" width="650" height="900"></a>
+        <span class="card-caption">Quatro Escolhidos. Qual será o seu caminho?</span>
+      </div><a class="hero-scroll" href="#jogo">Descubra Mytragor <span aria-hidden="true">↓</span></a>
     </section>
-
-    <section class="pathways" aria-labelledby="pathwaysTitle">
-      <div class="section-heading">
-        <p class="eyebrow">Escolha seu caminho</p>
-        <h2 id="pathwaysTitle">Entre no mundo de Mytragor</h2>
-      </div>
-      <div class="pathway-grid">
-        <a class="pathway" href="/comojogar/">
-          <span class="pathway-number">01</span>
-          <h3>Como jogar</h3>
-          <p>Conheça os fundamentos, as cartas e o fluxo de uma batalha.</p>
-          <span class="pathway-link">Ler agora →</span>
-        </a>
-        <a class="pathway" href="https://mytragor-battle-sim.vercel.app/index.html">
-          <span class="pathway-number">02</span>
-          <h3>Simulador</h3>
-          <p>Teste estratégias e experimente o campo de batalha digital.</p>
-          <span class="pathway-link">Jogar →</span>
-        </a>
-        <a class="pathway" href="http://mytragor.com.br/calculadora-mytragor/">
-          <span class="pathway-number">03</span>
-          <h3>Calculadora</h3>
-          <p>Acompanhe pontos de vida e aliados durante suas partidas.</p>
-          <span class="pathway-link">Abrir HUD →</span>
-        </a>
-      </div>
+    <section class="section intro" id="jogo" aria-labelledby="gameTitle">
+      <div class="section-heading"><p class="eyebrow">O jogo</p><h2 id="gameTitle">Uma mesa de RPG.<br>Um novo jeito de <em>duelar.</em></h2></div><div class="intro-copy"><p>Mytragor nasceu de aventuras em mesas de RPG e da paixão por jogos de cartas. Aqui, dois jogadores lideram seus Escolhidos em um duelo de aliados, magia e decisões.</p><p>Seu objetivo é reduzir a Vida do Escolhido adversário a zero — sem deixar o seu desprotegido. O caminho até lá é você quem constrói.</p><a class="text-link" href="/comojogar/#guia">Entenda sua primeira partida →</a></div>
+      <div class="feature-grid"><article class="feature"><span class="feature-icon" aria-hidden="true">◈</span><h3>Um líder, muitas combinações</h3><p>O Escolhido define a filiação do seu baralho. Combine suas cartas com opções Neutras e explore as sinergias.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">✦</span><h3>O poder dos Fragmentos</h3><p>Receba recursos ao longo dos turnos e escolha como usá-los para convocar aliados, ativar magias e preparar respostas.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">⌁</span><h3>Cada posição importa</h3><p>Atacar deixa um Aliado Exaurido e vulnerável. Decidir quando agir é tão importante quanto escolher a carta.</p></article></div>
     </section>
-
-    <section class="community" id="comunidade" aria-labelledby="communityTitle">
-      <p class="eyebrow">Comunidade</p>
-      <h2 id="communityTitle">A próxima batalha começa aqui.</h2>
-      <p>Novos canais da comunidade Mytragor serão reunidos neste espaço.</p>
+    <section class="section chosen-section" aria-labelledby="chosenTitle">
+      <div class="section-heading heading-row"><div><p class="eyebrow">Conheça as cartas</p><h2 id="chosenTitle">Quem vai liderar<br><em>a sua história?</em></h2></div><a class="text-link" href="/cartas/">Explorar a galeria completa →</a></div>
+      <div class="chosen-grid">
+        <a class="chosen" href="/cartas/?carta=escolhido_valbrak"><img src="/media/cartas/layout-escolhido_valbrak.webp" alt="Carta de Valbrak" width="650" height="900" loading="lazy"><span class="eyebrow">Arcano · Mago</span><h3>Valbrak</h3><p>Reúna Cidadãos e fortaleça seus aliados.</p><span class="text-link">Conheça o Escolhido ↗</span></a>
+        <a class="chosen" href="/cartas/?carta=escolhido_katsuvingador"><img src="/media/cartas/layout-escolhido_katsuvingador.webp" alt="Carta de Katsu" width="650" height="900" loading="lazy"><span class="eyebrow">Marcial · Guerreiro</span><h3>Katsu</h3><p>Abra caminho com seus Guerreiros.</p><span class="text-link">Conheça o Escolhido ↗</span></a>
+        <a class="chosen" href="/cartas/?carta=escolhido_Ademais"><img src="/media/cartas/layout-escolhido_Ademais.webp" alt="Carta de Ademais" width="650" height="900" loading="lazy"><span class="eyebrow">Sombras · Clérigo</span><h3>Ademais</h3><p>Transforme a força das Aranhas Negras em poder.</p><span class="text-link">Conheça o Escolhido ↗</span></a>
+        <a class="chosen" href="/cartas/?carta=escolhido_leafaefloresta"><img src="/media/cartas/layout-escolhido_leafaefloresta.webp" alt="Carta de Leafae" width="650" height="900" loading="lazy"><span class="eyebrow">Religioso · Druida</span><h3>Leafae</h3><p>Faça da cura uma fonte de novas possibilidades.</p><span class="text-link">Conheça o Escolhido ↗</span></a>
+      </div><p class="section-note">Arcano, Marcial, Sombras e Religioso: quatro filiações, além das cartas Neutras que podem acompanhar qualquer Escolhido.</p>
     </section>
+    <section class="section journey" aria-labelledby="journeyTitle"><div class="section-heading"><p class="eyebrow">Sua primeira partida</p><h2 id="journeyTitle">Do primeiro Fragmento<br>à <em>primeira estratégia.</em></h2></div><ol class="journey-grid"><li><span class="step-number">01</span><h3>Entenda o essencial</h3><p>Conheça o objetivo, as cartas e as quatro fases de um turno em um guia direto.</p><a class="text-link" href="/comojogar/#guia">Abrir guia rápido →</a></li><li><span class="step-number">02</span><h3>Prepare seu baralho</h3><p>Escolha seu líder e organize 40 cartas. O montador ajuda a conferir filiação e limite de cópias.</p><a class="text-link" href="/baralho/">Montar meu baralho →</a></li><li><span class="step-number">03</span><h3>Explore na prática</h3><p>Acesse o simulador oficial para conhecer o campo de batalha e experimentar estratégias.</p><a class="text-link" href="/simuladordebatalha/">Abrir simulador ↗</a></li></ol></section>
+    <section class="lore" id="universo" aria-labelledby="loreTitle"><div class="lore-content"><p class="eyebrow">Além das cartas</p><h2 id="loreTitle">Os Titãs caíram.<br><em>Seu poder ficou.</em></h2><p>Uma guerra entre deuses e Titãs mudou Mytragor para sempre. Espalhados pela terra, pelas águas e pelas criaturas, Fragmentos desse poder tornaram a magia parte do mundo.</p><p>Alguns nasceram com algo ainda mais raro: um Fragmento de Titã na própria essência. Aqueles que despertam esse poder são os Escolhidos.</p><a class="text-link" href="/comojogar/?pagina=4#manual">Descubra a origem no manual →</a><small>Ilustração: Caminhos Perigosos · Acervo Mytragor</small></div></section>
+    <section class="section" id="ferramentas" aria-labelledby="toolsTitle"><div class="section-heading"><p class="eyebrow">Sempre à mão</p><h2 id="toolsTitle">Menos dúvidas.<br><em>Mais jogo.</em></h2></div><div class="tool-grid"><a class="tool" href="/comojogar/#consulta"><span class="eyebrow">Consulta</span><h3>Regras e palavras-chave</h3><p>Encontre uma regra por assunto e consulte a página correspondente do manual.</p><span class="text-link">Buscar uma regra →</span></a><a class="tool" href="/manual/MANUAL%20MYTRAGOR.pdf" download><span class="eyebrow">Download · PDF</span><h3>Manual completo</h3><p>Guarde as regras para consultar também fora do navegador. Arquivo de aproximadamente 21 MB.</p><span class="text-link">Baixar manual ↓</span></a><a class="tool" href="http://mytragor.com.br/calculadora-mytragor/"><span class="eyebrow">Ferramenta de mesa · Externa</span><h3>Calculadora</h3><p>Acompanhe Vida e aliados durante a partida na calculadora oficial.</p><span class="text-link">Abrir calculadora ↗</span></a></div></section>
+    <section class="section faq" aria-labelledby="faqTitle"><div class="section-heading"><p class="eyebrow">Antes de começar</p><h2 id="faqTitle">Sua próxima pergunta<br>pode estar <em>aqui.</em></h2></div><div class="faq-list"><details><summary>O que preciso para uma partida?</summary><p>Dois jogadores, cada um com um baralho de exatamente 40 cartas e um Escolhido separado. Você pode usar até três cópias de cada carta, respeitando a filiação do seu Escolhido e as cartas Neutras.</p></details><details><summary>Como venço o duelo?</summary><p>Reduza a Vida do Escolhido adversário a zero. Você não precisa derrotar todos os Aliados. Também há derrota se um jogador precisar comprar cartas e não puder por estar sem cartas no baralho.</p></details><details><summary>O Escolhido faz parte das 40 cartas?</summary><p>Não. Ele começa em campo, separado do baralho, e permanece durante a partida. O Escolhido não ataca, mas pode usar suas habilidades conforme as condições da carta.</p></details><details><summary>Quanto tempo dura uma partida?</summary><p>O manual atual não define uma duração estimada. O tempo varia conforme a experiência dos jogadores e as estratégias utilizadas.</p></details><details><summary>Posso consultar o manual sem internet?</summary><p>Sim. Baixe o PDF na seção de ferramentas e salve-o no seu dispositivo antes da partida.</p></details></div></section>
+    <section class="community" id="comunidade" aria-labelledby="communityTitle"><div><p class="eyebrow">A próxima história é compartilhada</p><h2 id="communityTitle">Traga alguém para<br>a mesa de <em>Mytragor.</em></h2><p>Apresente o jogo a um amigo, compartilhe o guia e descubram novas combinações juntos.</p></div><div class="community-actions"><button class="button primary" id="shareGame" type="button">Compartilhar o jogo ↗</button><a class="text-link" href="/baralho/">Preparar um baralho para a partida →</a><p class="status-message" id="shareStatus" role="status"></p></div></section>
   </main>
-
-  <footer class="site-footer">
-    <img src="/assets/logo-dourado.png" alt="Mytragor">
-    <p>© <span id="currentYear">2026</span> Mytragor. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="/script.js"></script>
+  <footer class="site-footer"><a class="footer-brand" href="/" aria-label="Mytragor — início"><img class="brand-logo" src="/media/logo-mytragor.webp" alt="Mytragor" width="392" height="82" loading="lazy"></a><nav aria-label="Links do rodapé"><a href="/cartas/">Cartas</a><a href="/comojogar/">Regras</a><a href="/baralho/">Meu baralho</a><a href="/#comunidade">Compartilhe</a></nav><p>© <span id="currentYear">2026</span> Mytragor. Todos os direitos reservados.</p></footer>
 </body>
 </html>

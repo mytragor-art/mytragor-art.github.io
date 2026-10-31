@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#241416"><meta name="description" content="Monte seu baralho de Mytragor com validação de filiação, 40 cartas e até três cópias. Salve no navegador, exporte e compartilhe a lista."><title>Meu baralho | Mytragor</title><link rel="canonical" href="https://mytragor.com.br/baralho/"><link rel="stylesheet" href="/styles.css"><script type="module" src="/script.js"></script><script type="module" src="/baralho/script.js"></script></head><body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a><header class="site-header"><a class="site-brand" href="/" aria-label="Mytragor — início"><img class="brand-logo" src="/media/logo-mytragor.webp" alt="Mytragor" width="392" height="82"><span class="brand-subtitle">CARD GAME</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu"><span></span><span></span><span></span></button><nav class="main-menu" id="mainMenu" aria-label="Menu principal"><a href="/#jogo">O jogo</a><a href="/cartas/">Cartas</a><a href="/comojogar/">Como jogar</a><a href="/baralho/" aria-current="page">Meu baralho</a><a href="/#universo">Universo</a><a class="nav-cta" href="/simuladordebatalha/">Jogar online ↗</a></nav></header>
+<main id="conteudo"><div class="page-intro"><nav class="breadcrumb" aria-label="Localização"><a href="/">Início</a> / Meu baralho</nav><p class="eyebrow">Construa sua estratégia</p><h1>Um Escolhido.<br><em>Quarenta possibilidades.</em></h1><p>Escolha seu líder e adicione cartas da mesma filiação ou Neutras. O montador confere o limite de três cópias e salva seu rascunho neste navegador. Não há integração automática com o simulador.</p></div>
+<div class="page-content"><noscript><p class="no-js">O montador precisa de JavaScript. As regras de montagem estão no <a href="/comojogar/">guia de início</a>.</p></noscript>
+	<div class="builder-layout">
+		<section class="builder-catalog" aria-label="Cartas disponíveis">
+			<div class="builder-controls">
+				<div class="builder-leader">
+					<img id="chosenPreview" class="chosen-preview" alt="" width="650" height="900" hidden>
+					<div class="leader-selection">
+						<p class="eyebrow">01 · Escolha quem lidera</p>
+						<div class="field"><label for="chosenSelect">Seu Escolhido</label><select id="chosenSelect" aria-describedby="chosenHelp"><option value="">Escolha seu líder…</option></select></div>
+						<p class="leader-help" id="chosenHelp">Trocar o líder remove cartas incompatíveis e mantém as Neutras.</p>
+					</div>
+				</div>
+				<div class="builder-card-filters">
+					<p class="eyebrow">02 · Encontre e adicione cartas</p>
+					<div class="filters">
+						<div class="field"><label for="cardSearch">Buscar carta</label><input id="cardSearch" type="search" placeholder="Nome da carta…" autocomplete="off"></div>
+						<div class="field"><label for="typeFilter">Tipo</label><select id="typeFilter"><option value="">Todos os tipos</option><option>Aliado</option><option>Magia</option><option>Ambiente</option><option>Truque</option><option>Equipamento</option></select></div>
+						<div class="field" hidden><label for="affiliationFilter">Filiação</label><select id="affiliationFilter"><option value="">Compatíveis</option></select></div>
+						<button class="button secondary" id="resetFilters" type="button">Limpar</button>
+					</div>
+				</div>
+			</div>
+			<div class="builder-results"><p class="result-count" id="resultCount" role="status"></p><a class="text-link" href="#deckTitle">Ver meu baralho ↓</a></div>
+			<div class="gallery-grid" id="cardGrid"></div>
+		</section>
+		<aside class="deck-panel" aria-labelledby="deckTitle">
+			<p class="eyebrow">Seu rascunho</p><h2 id="deckTitle">Meu baralho</h2>
+			<p class="deck-leader" id="deckLeader">Nenhum líder selecionado</p>
+			<p class="deck-count" id="deckCount">0 / 40</p><p class="deck-status" id="deckStatus" role="status"></p>
+			<ul class="deck-validation" id="deckValidation"></ul><ul class="deck-list" id="deckList" aria-label="Cartas do seu baralho"></ul>
+			<div class="deck-tools"><button class="button primary" id="exportDeck" type="button">Exportar JSON ↓</button><button class="button secondary" id="copyDeck" type="button">Copiar lista</button><label class="button secondary file-label">Importar JSON<input class="sr-only" type="file" id="importDeck" accept=".json,application/json" aria-label="Importar baralho em JSON"></label><button class="button secondary" id="clearDeck" type="button">Limpar baralho</button></div>
+			<p class="status-message" id="deckMessage" role="status"></p><p class="notice">Rascunhos incompletos também podem ser exportados. O arquivo fica no seu dispositivo; nada é enviado a um servidor.</p><a class="text-link" href="/comojogar/?pagina=9#manual">Conferir regras de montagem →</a>
+		</aside>
+	</div>
+</div></main>
+<dialog class="card-dialog" id="cardDialog" aria-labelledby="dialogTitle"><button class="dialog-close" type="button">Fechar ×</button><div class="dialog-layout"><img id="dialogImage" alt="" width="650" height="900"><div><p class="eyebrow" id="dialogMeta"></p><h2 id="dialogTitle"></h2><p id="dialogDescription"></p><p>Consulte o efeito completo e os créditos na própria carta.</p><a class="text-link" id="dialogOriginal" target="_blank" rel="noopener">Abrir imagem original ↗</a></div></div></dialog>
+<footer class="site-footer"><a class="footer-brand" href="/" aria-label="Mytragor — início"><img class="brand-logo" src="/media/logo-mytragor.webp" alt="Mytragor" width="392" height="82" loading="lazy"></a><nav aria-label="Links do rodapé"><a href="/cartas/">Cartas</a><a href="/comojogar/">Regras</a><a href="/#comunidade">Compartilhe</a></nav><p>© <span id="currentYear">2026</span> Mytragor. Todos os direitos reservados.</p></footer></body></html>

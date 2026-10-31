@@ -25,6 +25,22 @@ test('home ilustrada preserva os quatro líderes e usa artes leves fora das mold
   }
 });
 
+test('pré-campanha aparece após a apresentação, com banner inteiro e link seguro para a Meeple Starter', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
+  const campaign = html.match(/<section class="campaign"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(campaign);
+  assert.ok(html.indexOf('id="jogo"') < html.indexOf('class="campaign"'));
+  assert.ok(html.indexOf('class="campaign"') < html.indexOf('class="section chosen-section"'));
+  assert.match(campaign, /href="https:\/\/meeplestarter\.com\.br\/mytragor" target="_blank" rel="noopener noreferrer"/);
+  assert.match(campaign, /alt="[^"]*pré-campanha[^"]*Sam Trioni/);
+  assert.match(campaign, /Seguir na Meeple Starter/);
+  assert.match(css, /\.campaign-link img\{[^}]*width:100%;height:auto/);
+  const image = await sharp(fileURLToPath(new URL('../media/propagandas/mytragor-pre-campanha.webp', import.meta.url))).metadata();
+  assert.equal(image.width, 1600);
+  assert.equal(image.height, 700);
+});
+
 test('tipografia usa fantasia literária suave, sem as fontes rígidas anteriores', async () => {
   const css = await readFile(new URL('../styles.css',import.meta.url),'utf8');
   assert.ok(css.includes('family=Alegreya:ital'));

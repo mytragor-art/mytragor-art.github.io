@@ -114,6 +114,14 @@ em{font-style:italic}
 .home .feature-icon{font-size:25px;margin-bottom:12px}
 .home .feature h3{font-size:25px}
 .home .feature p,.home .journey-grid p,.home .tool p,.home .faq-list details p{font-size:16px}
+.home .campaign{padding:0 max(24px,calc((100% - 1160px)/2)) 64px;background:var(--bg)}
+.campaign-link{display:block;overflow:hidden;border:1px solid #d9b86d66;border-radius:8px;background:#0a101b;transition:border-color .2s,box-shadow .2s}
+.campaign-link:hover,.campaign-link:focus-visible{border-color:var(--gold);box-shadow:0 8px 30px #0004}
+.campaign-link:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.campaign-link img{display:block;width:100%;height:auto}
+.campaign-link .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.campaign-caption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px;border-top:1px solid #d9b86d33;color:var(--paper);font-size:16px}
+@media(max-width:600px){.home .campaign{padding:0 24px 40px}.campaign-caption{flex-direction:column;align-items:flex-start;padding:14px 16px;font-size:15px}.campaign-caption .text-link{font-size:15px}}
 .home .chosen-section{background:linear-gradient(180deg,#1d2022,#141415);position:relative}
 .home .chosen-grid{gap:22px}
 .home .chosen{--chosen-accent:#a3bdd3;position:relative;padding-bottom:8px;border-bottom:1px solid var(--chosen-accent)}

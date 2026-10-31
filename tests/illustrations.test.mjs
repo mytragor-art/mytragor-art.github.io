@@ -46,7 +46,7 @@ test('artes são distintas das cartas e cada versão preserva seu ilustrador con
     ['escolhido_leafaefloresta', 'Katarina Banffy'], ['leafae-full-art', 'Sam Trioni'],
     ['porcoespinho', 'Ruam Costa'], ['porco-espinho-full-art', 'Diogo Roesberg'],
     ['valbrak-full-art-v3', 'André Martuscelli'], ['valbrak-prestigio', 'Diego Fernando'],
-    ['ursonegro', 'Enzo Anael']
+    ['ursonegro', 'Enzo Anael'], ['mantocouro', 'Rizzart'], ['mascota', 'SXolote']
   ]) assert.equal(byCard.get(id)?.artist, author, id);
 });
 

@@ -83,12 +83,17 @@ export const typeDescriptions = {
   Truque: 'Uma resposta que pode ser ativada da mão no turno de qualquer jogador, quando a condição da carta for atendida e o custo pago.',
   Equipamento: 'Uma carta de suporte acoplada a um personagem, concedendo os bônus ou habilidades descritos nela.'
 };
+const sourceOverrides = {
+  ursonegro: 'layout-ursonegro.ai.png',
+  mantocouro: 'layout-mantocouro.ai.png',
+  mascota: 'layout-aranhasmascote.ai.png'
+};
 export const cards = entries.map(([id, name, type, affiliation, cost, description = '', token = false]) => ({
   id, name, type, affiliation, cost, description, token,
   image: `/media/cartas/layout-${id}.webp`,
   thumbnail: `/media/cartas/thumbs/layout-${id}.webp`,
   reading: `/media/cartas/leitura/layout-${id}.webp`,
-  original: `/cartas.png/layout-${id}${id === 'ursonegro' ? '.ai' : ''}.png`
+  original: `/cartas.png/${sourceOverrides[id] || `layout-${id}.png`}`
 }));
 export const cardById = new Map(cards.map(card => [card.id, card]));
 export function normalize(value) { return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim(); }

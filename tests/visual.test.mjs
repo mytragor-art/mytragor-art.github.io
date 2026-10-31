@@ -1,6 +1,16 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
+import sharp from 'sharp';
+import { fileURLToPath } from 'node:url';
+
+test('banner da Gamboa mantém apenas a cena acima da ponta da flecha', async () => {
+  const html = await readFile(new URL('../cartas/index.html', import.meta.url), 'utf8');
+  assert.ok(html.includes('src="/media/acervo/ilustracoes/gamboa-banner.webp"'));
+  const image = await sharp(fileURLToPath(new URL('../media/acervo/ilustracoes/gamboa-banner.webp', import.meta.url))).metadata();
+  assert.equal(image.width, 1143);
+  assert.equal(image.height, 650);
+});
 
 test('home ilustrada preserva os quatro líderes e usa artes leves fora das molduras', async () => {
   const html = await readFile(new URL('../index.html',import.meta.url),'utf8');

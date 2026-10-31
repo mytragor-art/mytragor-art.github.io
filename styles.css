@@ -200,7 +200,7 @@ em{font-style:italic}
 .inner-page .breadcrumb{margin-bottom:22px;position:relative}
 .inner-page .page-intro .hero-actions{max-width:600px;margin:22px 0 0;align-items:center;gap:14px}
 .page-art-credit{position:absolute;right:max(28px,calc((100% - 1160px)/2));bottom:14px;font:400 12px/1.5 var(--font-body);color:#fff3e1;text-shadow:0 1px 5px #000;background:#141415ad;padding:4px 9px;border-radius:3px;max-width:38%;text-align:right}
-.gallery-page .page-intro-art{object-position:40% 24%;width:48%}
+.gallery-page .page-intro-art{object-position:40% 50%;width:48%}
 .builder-page .page-intro-art{object-position:48% 32%}
 .guide-page .page-intro-art{object-position:25% 35%}
 .inner-page .page-content{position:relative;padding-top:32px}

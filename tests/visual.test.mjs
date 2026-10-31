@@ -25,12 +25,14 @@ test('home ilustrada preserva os quatro líderes e usa artes leves fora das mold
   }
 });
 
-test('pré-campanha aparece após a apresentação, com banner inteiro e link seguro para a Meeple Starter', async () => {
+test('pré-campanha aparece após a abertura e antes do Conexão, com banner inteiro e link seguro', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
   const campaign = html.match(/<section class="campaign"[\s\S]*?<\/section>/)?.[0];
   assert.ok(campaign);
-  assert.ok(html.indexOf('id="jogo"') < html.indexOf('class="campaign"'));
+  assert.ok(html.indexOf('class="hero"') < html.indexOf('class="campaign"'));
+  assert.ok(html.indexOf('class="campaign"') < html.indexOf('id="primeiro-evento"'));
+  assert.equal((html.match(/id="pre-campanha"/g) || []).length, 1);
   assert.ok(html.indexOf('class="campaign"') < html.indexOf('class="section chosen-section"'));
   assert.match(campaign, /href="https:\/\/meeplestarter\.com\.br\/mytragor" target="_blank" rel="noopener noreferrer"/);
   assert.match(campaign, /alt="[^"]*pré-campanha[^"]*Sam Trioni/);
@@ -39,6 +41,31 @@ test('pré-campanha aparece após a apresentação, com banner inteiro e link se
   const image = await sharp(fileURLToPath(new URL('../media/propagandas/mytragor-pre-campanha.webp', import.meta.url))).metadata();
   assert.equal(image.width, 1600);
   assert.equal(image.height, 700);
+});
+
+test('primeiro evento destaca data e local oficiais, com ingressos e informações externas', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
+  const event = html.match(/<section class="event-announcement"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(event);
+  assert.ok(html.indexOf('id="primeiro-evento"') < html.indexOf('id="jogo"'));
+  assert.match(event, /aria-labelledby="eventTitle"/);
+  assert.match(event, /Nosso primeiro evento presencial/);
+  assert.match(event, /datetime="2026-11-07"/);
+  assert.match(event, /Conexão TCG Brasil/);
+  assert.match(event, /Tuzzy Cards Lounge · Barueri, SP/);
+  assert.match(event, /1119 — 23º andar, Tamboré/);
+  assert.match(event, /href="https:\/\/conexaotcgbrasil\.com\.br\/" target="_blank" rel="noopener noreferrer"/);
+  assert.match(event, /href="https:\/\/www\.sympla\.com\.br\/evento\/conexao-tcg-brasil-tuzzy-lounge\/3617978\?share_id=copiarlink" target="_blank" rel="noopener noreferrer"/);
+  assert.match(css, /\.event-card\{display:grid/);
+  for (const [name, alt] of [['logo', 'Conexão TCG Brasil'], ['nanda', 'Nanda, mascote']]) {
+    assert.ok(event.includes(`/media/eventos/conexao-tcg-${name}.webp`));
+    assert.ok(event.includes(`alt="${alt}`));
+    const artwork = await sharp(fileURLToPath(new URL(`../media/eventos/conexao-tcg-${name}.webp`, import.meta.url))).metadata();
+    assert.ok(artwork.width > 0 && artwork.height > 0);
+    assert.equal(artwork.hasAlpha, true, 'Transparência das artes oficiais preservada');
+  }
+  assert.match(css, /\.event-mascot img\{[^}]*height:auto;[^}]*object-fit:contain/);
 });
 
 test('tipografia usa fantasia literária suave, sem as fontes rígidas anteriores', async () => {

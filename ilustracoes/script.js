@@ -35,6 +35,9 @@ function createTile(art, open) {
   image.decoding = 'async';
   image.width = art.width;
   image.height = art.height;
+  const thumbnail = document.createElement('div');
+  thumbnail.className = 'art-thumbnail';
+  thumbnail.append(image);
   const caption = document.createElement('div');
   caption.className = 'art-tile-caption';
   const title = document.createElement('h2');
@@ -42,14 +45,15 @@ function createTile(art, open) {
   const credit = document.createElement('span');
   credit.className = 'art-credit';
   credit.textContent = creditFor(art);
-  caption.append(title, credit);
+  caption.append(title);
   if (art.variant) {
     const variant = document.createElement('span');
     variant.className = 'art-variant';
     variant.textContent = art.variant;
     caption.append(variant);
   }
-  button.append(image, caption);
+  caption.append(credit);
+  button.append(thumbnail, caption);
   button.addEventListener('click', () => open(art));
   tile.append(button);
   return tile;

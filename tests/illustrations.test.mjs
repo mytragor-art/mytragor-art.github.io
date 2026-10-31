@@ -123,8 +123,30 @@ test('renderização segura, miniaturas diferidas e imagens sem distorção em q
   assert.match(script, /dialog\.showModal\(\)/);
   assert.match(script, /dialog\.close\(\)/);
   assert.match(script, /event\.target !== dialog/);
-  assert.match(css, /\.art-open img\{[^}]*height:auto;[^}]*object-fit:contain/);
+  assert.match(css, /\.art-open \.art-thumbnail img\{[^}]*position:absolute;[^}]*height:calc\(100% - 24px\);[^}]*object-fit:contain/);
   assert.match(css, /\.art-dialog \.art-image-stage img\{[^}]*height:auto;[^}]*object-fit:contain/);
-  assert.match(css, /columns:1/);
-  assert.ok(!/object-fit:cover/.test(css));
+  assert.match(css, /\.art-grid\{display:grid;grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
+  assert.match(css, /grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(css, /grid-template-columns:minmax\(0,1fr\)/);
+  assert.match(css, /\.art-thumbnail\{[^}]*aspect-ratio:4\/3/);
+  assert.match(css, /\.art-open\{[^}]*height:100%/);
+  assert.match(script, /thumbnail\.append\(image\)/);
+  assert.match(script, /button\.append\(thumbnail, caption\)/);
+  assert.ok(!/\.art-open img\{[^}]*object-fit:cover/.test(css));
+  assert.ok(!/\.art-dialog \.art-image-stage img\{[^}]*object-fit:cover/.test(css));
+});
+
+test('capa do Executor: recorte dedicado nos olhos, crédito e acervo original preservado', async () => {
+  const html = await read('ilustracoes/index.html');
+  const css = await read('ilustracoes/gallery.css');
+  const build = await read('scripts/build-gallery-banner.mjs');
+  assert.match(html, /class="art-cover"[\s\S]*executor-banner\.webp[\s\S]*Ilustração de Bruno Cavaretto/);
+  assert.match(html, /executor-banner\.webp"[^>]*alt="[^"]*olhos[^>]*fetchpriority="high"/);
+  assert.match(css, /\.art-cover img\{[^}]*object-fit:cover;[^}]*object-position:45% 50%/);
+  assert.match(build, /extract\(\{ left: 440, top: 100, width: 1000, height: 400 \}\)/);
+  const cover = await sharp(fileURLToPath(new URL('media/acervo/ilustracoes/executor-banner.webp', root))).metadata();
+  assert.equal(cover.width, 1000);
+  assert.equal(cover.height, 400);
+  const { illustrations } = await import('../data/illustrations.js');
+  assert.ok(illustrations.some(art => art.image.endsWith('/Executor-final-Bruno-Cavaretto.jpg.webp') && art.width === 1600 && art.height === 1209));
 });

@@ -62,7 +62,7 @@ test('todas as páginas do manual e referências de regras existem', async () =>
   for (const rule of rules) assert.ok(rule.page >= 1 && rule.page <= pageTitles.length);
 });
 test('HTML: recursos e links internos existem; sem loja nem assets removidos', async () => {
-  for (const file of ['index.html','cartas/index.html','comojogar/index.html','baralho/index.html']) {
+  for (const file of ['index.html','cartas/index.html','comojogar/index.html','baralho/index.html','ilustracoes/index.html','calculadora-mytragor/index.html','eventos/index.html']) {
     const html = await readFile(new URL(file,root),'utf8');
     assert.ok(!html.includes('/assets/')); assert.ok(!/loja|comprar produto|carrinho/i.test(html));
     assert.equal((html.match(/<option(?:\s|>)/g) || []).length, (html.match(/<\/option>/g) || []).length, `${file}: opções de formulário devem ter abertura e fechamento`);
@@ -70,6 +70,30 @@ test('HTML: recursos e links internos existem; sem loja nem assets removidos', a
       const target = decodeURIComponent(url); await access(new URL(`.${target}${target.endsWith('/')?'index.html':''}`,root));
     }
   }
+});
+test('calculadora integrada: navegação, recursos locais e app offline', async () => {
+  for (const file of ['index.html', 'cartas/index.html', 'comojogar/index.html', 'baralho/index.html', 'ilustracoes/index.html', 'eventos/index.html']) {
+    const html = await readFile(new URL(file, root), 'utf8');
+    const menu = html.match(/<nav class="main-menu"[\s\S]*?<\/nav>/)?.[0];
+    assert.ok(menu?.includes('href="/calculadora-mytragor/"'), file);
+    assert.ok(menu?.includes('href="/eventos/"'), file);
+    assert.ok(!html.includes('http://mytragor.com.br/calculadora-mytragor/'));
+  }
+  const calculatorRoot = new URL('calculadora-mytragor/', root);
+  const html = await readFile(new URL('index.html', calculatorRoot), 'utf8');
+  for (const [, resource] of html.matchAll(/(?:href|src)="((?:\.\/)?(?:data\/|icons\/|manifest)[^"]+)"/g)) {
+    await access(new URL(resource, calculatorRoot));
+  }
+  assert.equal((html.match(/class="ally"/g) || []).length, 10);
+  assert.ok(html.includes('href="/">← Voltar ao site'));
+  const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', calculatorRoot), 'utf8'));
+  for (const icon of manifest.icons) await access(new URL(icon.src, calculatorRoot));
+  const worker = await readFile(new URL('sw.js', calculatorRoot), 'utf8');
+  for (const [, asset] of worker.matchAll(/'(\.\/[^']*)'/g)) {
+    await access(new URL(asset === './' ? 'index.html' : asset, calculatorRoot));
+  }
+  assert.ok(worker.includes('key.startsWith(CACHE_PREFIX)'));
+  assert.ok(worker.includes('e.request.url.startsWith(self.registration.scope)'));
 });
 test('a escolha do líder fica junto à busca, antes das cartas, e fora do resumo', async () => {
   const html = await readFile(new URL('baralho/index.html', root), 'utf8');

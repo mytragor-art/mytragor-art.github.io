@@ -5,11 +5,13 @@ Site estático em português para GitHub Pages no domínio `mytragor.com.br`. HT
 ## Experiência e rotas
 
 - `/`: apresentação, Escolhidos, percurso iniciante, universo, ferramentas, FAQ e compartilhamento.
+- A home destaca a campanha de financiamento coletivo aberta na Meeple Starter. O banner original está em `propagandas/Mytragor-Campanha-Aberta-Simulador.png`; `node scripts/build-campaign.mjs` gera o WebP sem recortar a arte ou os créditos. O endereço `/#pre-campanha` permanece válido para links antigos.
 - `/cartas/`: 90 entradas: 68 cartas base, 17 versões Full Art, Prestígio e Promo e cinco Fragmentos. Inclui Valbrak Full versão 3 e Katsu Full PeB, com rótulos próprios. Busca sem acentos, filtros combinados de edição/tipo/filiação, ampliação, seletor de versões e links diretos (`?carta=valbrak-prestigio`). Art Cards e Totens não entram na galeria. Versões não criam novas identidades no montador; Fragmentos são somente para consulta.
 - `/comojogar/`: guia rápido, 23 assuntos pesquisáveis e manual com 22 páginas, incluindo capa. `?pagina=18#manual` abre uma página específica. Setas do teclado funcionam com o leitor em foco.
 - `/baralho/`: montador com um Escolhido, 40 cartas, até três cópias e filiação compatível. Totens não entram no baralho. Rascunho local, exportação/importação JSON e cópia de lista textual; sem integração automática com o simulador.
+- `/eventos/`: agenda e arquivo separados em Próximos e Concluídos. O Conexão TCG Brasil de 7 de novembro de 2026 está arquivado em `/eventos/#primeiro-evento`, sem chamada para ingressos. Não há próximos eventos anunciados; inclua apenas informações confirmadas.
 - `/simuladordebatalha/`: redireciona ao simulador externo em `https://mytragor-battle-sim.vercel.app/index.html`.
-- Calculadora externa existente: `http://mytragor.com.br/calculadora-mytragor/`. Não está implementada neste repositório.
+- `/calculadora-mytragor/`: calculadora de mesa integrada a partir de [mytragor-art/calculadora-mytragor](https://github.com/mytragor-art/calculadora-mytragor), revisão `5e30d4f6e41c3da7df5ca145d4a2b9946ac4a895`. Mantém Vida dos dois jogadores, cinco aliados por jogador, seleção de Escolhidos, salvamento local e instalação como app para uso offline. Acesso pelo menu e pelas ferramentas da home, com retorno ao site.
 
 Não foram inventados canais sociais, eventos, depoimentos, notícias ou duração estimada de partidas. A seção de comunidade permite compartilhar o site. Esses conteúdos só devem ser incluídos quando houver informação oficial verificável.
 
@@ -43,4 +45,4 @@ O leitor usa `manual_capa.png`, páginas 1–21 (a 11 é JPG) e gera `media/manu
 
 O montador guarda somente o rascunho no `localStorage` do próprio navegador. Bloqueio ou corrupção do armazenamento não impede o uso nem a exportação. Trocar de Escolhido remove cartas incompatíveis, mantendo as Neutras. Limpar o baralho exige confirmação por segundo clique. Importação inválida preserva o rascunho atual.
 
-Publique arquivos estáticos e mantenha `CNAME` e `.nojekyll` na raiz. Não publique `node_modules`. Não é necessário build no servidor. As fontes são solicitadas ao Google Fonts, com fontes de sistema como alternativa; simulador e calculadora são serviços externos independentes. Nenhum deploy é feito pelos testes locais.
+Publique arquivos estáticos e mantenha `CNAME` e `.nojekyll` na raiz. Não publique `node_modules`. Não é necessário build no servidor. As fontes são solicitadas ao Google Fonts, com fontes de sistema como alternativa; o simulador é um serviço externo independente. A calculadora salva a partida somente no navegador e seu service worker usa um cache próprio, restrito à sua rota. Nenhum deploy é feito pelos testes locais.

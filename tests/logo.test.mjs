@@ -18,7 +18,7 @@ test('logo oficial recortado e transparente mantém detalhes brancos internos', 
   assert.deepEqual([...data.subarray((5 * 11 + 5) * 4, (5 * 11 + 5) * 4 + 4)], [255,255,255,255]);
 });
 test('todas as páginas usam o logo oficial no cabeçalho e rodapé', async () => {
-  for (const file of ['index.html','cartas/index.html','baralho/index.html','comojogar/index.html']) {
+  for (const file of ['index.html','cartas/index.html','baralho/index.html','comojogar/index.html','eventos/index.html']) {
     const html = await readFile(new URL(`../${file}`, import.meta.url), 'utf8');
     assert.equal((html.match(/src="\/media\/logo-mytragor.webp"/g) || []).length, 2, file);
     assert.ok(!html.includes('◈ MYTRAGOR'), file);

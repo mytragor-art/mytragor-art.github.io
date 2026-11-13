@@ -25,38 +25,51 @@ test('home ilustrada preserva os quatro líderes e usa artes leves fora das mold
   }
 });
 
-test('pré-campanha aparece após a abertura e antes do Conexão, com banner inteiro e link seguro', async () => {
+test('campanha aberta substitui a pré-campanha, com banner inteiro e link seguro', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
   const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
   const campaign = html.match(/<section class="campaign"[\s\S]*?<\/section>/)?.[0];
   assert.ok(campaign);
   assert.ok(html.indexOf('class="hero"') < html.indexOf('class="campaign"'));
-  assert.ok(html.indexOf('class="campaign"') < html.indexOf('id="primeiro-evento"'));
+  assert.ok(html.indexOf('class="campaign"') < html.indexOf('id="jogo"'));
   assert.equal((html.match(/id="pre-campanha"/g) || []).length, 1);
   assert.ok(html.indexOf('class="campaign"') < html.indexOf('class="section chosen-section"'));
   assert.match(campaign, /href="https:\/\/meeplestarter\.com\.br\/mytragor" target="_blank" rel="noopener noreferrer"/);
-  assert.match(campaign, /alt="[^"]*pré-campanha[^"]*Sam Trioni/);
-  assert.match(campaign, /Seguir na Meeple Starter/);
+  assert.match(campaign, /alt="[^"]*financiamento coletivo aberto[^"]*ras_art_11/);
+  assert.match(campaign, /Apoiar na Meeple Starter/);
+  assert.ok(!campaign.includes('mytragor-pre-campanha.webp'));
   assert.match(css, /\.campaign-link img\{[^}]*width:100%;height:auto/);
-  const image = await sharp(fileURLToPath(new URL('../media/propagandas/mytragor-pre-campanha.webp', import.meta.url))).metadata();
+  const image = await sharp(fileURLToPath(new URL('../media/propagandas/mytragor-campanha-aberta.webp', import.meta.url))).metadata();
   assert.equal(image.width, 1600);
   assert.equal(image.height, 700);
+  const original = await sharp(fileURLToPath(new URL('../propagandas/Mytragor-Campanha-Aberta-Simulador.png', import.meta.url))).metadata();
+  assert.equal(image.width, original.width);
+  assert.equal(image.height, original.height);
 });
 
-test('primeiro evento destaca data e local oficiais, com ingressos e informações externas', async () => {
-  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+test('Conexão fica arquivado nos concluídos, preservando data, local e artes oficiais', async () => {
+  const home = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const html = await readFile(new URL('../eventos/index.html', import.meta.url), 'utf8');
   const css = await readFile(new URL('../styles.css', import.meta.url), 'utf8');
-  const event = html.match(/<section class="event-announcement"[\s\S]*?<\/section>/)?.[0];
+  const event = html.match(/<article class="event-card"[\s\S]*?<\/article>/)?.[0];
   assert.ok(event);
-  assert.ok(html.indexOf('id="primeiro-evento"') < html.indexOf('id="jogo"'));
+  assert.ok(!home.includes('id="primeiro-evento"'));
+  assert.ok(!home.includes('conexao-tcg-logo.webp'));
+  assert.ok(html.indexOf('id="concluidos"') < html.indexOf('id="primeiro-evento"'));
+  assert.ok(!html.slice(html.indexOf('id="proximos"'), html.indexOf('id="concluidos"')).includes('event-card'));
+  assert.match(html, /Nenhum próximo evento anunciado/);
+  assert.match(html, /href="#proximos"/);
+  assert.match(html, /href="#concluidos"/);
   assert.match(event, /aria-labelledby="eventTitle"/);
+  assert.match(event, /Concluído/);
+  assert.match(event, /Mytragor participou/);
   assert.match(event, /Nosso primeiro evento presencial/);
   assert.match(event, /datetime="2026-11-07"/);
   assert.match(event, /Conexão TCG Brasil/);
   assert.match(event, /Tuzzy Cards Lounge · Barueri, SP/);
   assert.match(event, /1119 — 23º andar, Tamboré/);
   assert.match(event, /href="https:\/\/conexaotcgbrasil\.com\.br\/" target="_blank" rel="noopener noreferrer"/);
-  assert.match(event, /href="https:\/\/www\.sympla\.com\.br\/evento\/conexao-tcg-brasil-tuzzy-lounge\/3617978\?share_id=copiarlink" target="_blank" rel="noopener noreferrer"/);
+  assert.ok(!/Ver ingressos|Mytragor estará|Vamos nos encontrar/.test(event));
   assert.match(css, /\.event-card\{display:grid/);
   for (const [name, alt] of [['logo', 'Conexão TCG Brasil'], ['nanda', 'Nanda, mascote']]) {
     assert.ok(event.includes(`/media/eventos/conexao-tcg-${name}.webp`));

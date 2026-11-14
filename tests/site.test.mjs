@@ -62,7 +62,7 @@ test('todas as páginas do manual e referências de regras existem', async () =>
   for (const rule of rules) assert.ok(rule.page >= 1 && rule.page <= pageTitles.length);
 });
 test('HTML: recursos e links internos existem; sem loja nem assets removidos', async () => {
-  for (const file of ['index.html','cartas/index.html','comojogar/index.html','baralho/index.html','ilustracoes/index.html','calculadora-mytragor/index.html','eventos/index.html']) {
+  for (const file of ['index.html','cartas/index.html','comojogar/index.html','baralho/index.html','ilustracoes/index.html','calculadora/index.html','eventos/index.html']) {
     const html = await readFile(new URL(file,root),'utf8');
     assert.ok(!html.includes('/assets/')); assert.ok(!/loja|comprar produto|carrinho/i.test(html));
     assert.equal((html.match(/<option(?:\s|>)/g) || []).length, (html.match(/<\/option>/g) || []).length, `${file}: opções de formulário devem ter abertura e fechamento`);
@@ -75,11 +75,11 @@ test('calculadora integrada: navegação, recursos locais e app offline', async 
   for (const file of ['index.html', 'cartas/index.html', 'comojogar/index.html', 'baralho/index.html', 'ilustracoes/index.html', 'eventos/index.html']) {
     const html = await readFile(new URL(file, root), 'utf8');
     const menu = html.match(/<nav class="main-menu"[\s\S]*?<\/nav>/)?.[0];
-    assert.ok(menu?.includes('href="/calculadora-mytragor/"'), file);
+    assert.ok(menu?.includes('href="/calculadora/"'), file);
     assert.ok(menu?.includes('href="/eventos/"'), file);
     assert.ok(!html.includes('http://mytragor.com.br/calculadora-mytragor/'));
   }
-  const calculatorRoot = new URL('calculadora-mytragor/', root);
+  const calculatorRoot = new URL('calculadora/', root);
   const html = await readFile(new URL('index.html', calculatorRoot), 'utf8');
   for (const [, resource] of html.matchAll(/(?:href|src)="((?:\.\/)?(?:data\/|icons\/|manifest)[^"]+)"/g)) {
     await access(new URL(resource, calculatorRoot));

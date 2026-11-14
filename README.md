@@ -11,7 +11,8 @@ Site estático em português para GitHub Pages no domínio `mytragor.com.br`. HT
 - `/baralho/`: montador com um Escolhido, 40 cartas, até três cópias e filiação compatível. Totens não entram no baralho. Rascunho local, exportação/importação JSON e cópia de lista textual; sem integração automática com o simulador.
 - `/eventos/`: agenda e arquivo separados em Próximos e Concluídos. O Conexão TCG Brasil de 7 de novembro de 2026 está arquivado em `/eventos/#primeiro-evento`, sem chamada para ingressos. Não há próximos eventos anunciados; inclua apenas informações confirmadas.
 - `/simuladordebatalha/`: redireciona ao simulador externo em `https://mytragor-battle-sim.vercel.app/index.html`.
-- `/calculadora-mytragor/`: calculadora de mesa integrada a partir de [mytragor-art/calculadora-mytragor](https://github.com/mytragor-art/calculadora-mytragor), revisão `5e30d4f6e41c3da7df5ca145d4a2b9946ac4a895`. Mantém Vida dos dois jogadores, cinco aliados por jogador, seleção de Escolhidos, salvamento local e instalação como app para uso offline. Acesso pelo menu e pelas ferramentas da home, com retorno ao site.
+- `/calculadora/`: calculadora de mesa integrada a partir de [mytragor-art/calculadora-mytragor](https://github.com/mytragor-art/calculadora-mytragor), revisão `5e30d4f6e41c3da7df5ca145d4a2b9946ac4a895`. Mantém Vida dos dois jogadores, cinco aliados por jogador, seleção de Escolhidos, salvamento local e instalação como app para uso offline. Acesso pelo menu e pelas ferramentas da home, com retorno ao site.
+- A rota integrada usa `/calculadora/` porque `/calculadora-mytragor/` é atendida pelo GitHub Pages do repositório original, mesmo com uma pasta homônima neste site.
 
 Não foram inventados canais sociais, eventos, depoimentos, notícias ou duração estimada de partidas. A seção de comunidade permite compartilhar o site. Esses conteúdos só devem ser incluídos quando houver informação oficial verificável.
 

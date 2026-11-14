@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
+import { runInNewContext } from 'node:vm';
 import { cards, cardById, filterCards } from '../data/cards.js';
 import { emptyDeck, deckTotal, canAdd, isCompatible, parseDeck, validateDeck, builderCards } from '../lib/deck.js';
 import { rules, pageTitles } from '../data/rules.js';
@@ -84,9 +85,23 @@ test('calculadora integrada: navegação, recursos locais e app offline', async 
   for (const [, resource] of html.matchAll(/(?:href|src)="((?:\.\/)?(?:data\/|icons\/|manifest)[^"]+)"/g)) {
     await access(new URL(resource, calculatorRoot));
   }
-  assert.equal((html.match(/class="ally"/g) || []).length, 10);
+  const grid = { innerHTML: '' };
+  const generation = html.match(/function generateAllies\(\)\{[\s\S]*?\n  generateAllies\(\)/)?.[0];
+  assert.ok(generation);
+  runInNewContext(generation, { get: () => grid });
+  assert.equal((grid.innerHTML.match(/class="ally"/g) || []).length, 10);
+  for (const player of ['p1', 'p2']) {
+    assert.equal((grid.innerHTML.match(new RegExp(`data-p="${player}"`, 'g')) || []).length, 5);
+  }
   assert.ok(html.includes('href="/">← Voltar ao site'));
+  assert.ok(html.includes('id="d20btn"'));
+  assert.ok(html.includes('id="installDialog"'));
+  assert.ok(html.includes('Adicionar à Tela de Início'));
+  assert.ok(html.includes('id="installNow"'));
   const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', calculatorRoot), 'utf8'));
+  assert.equal(manifest.id, '/calculadora/');
+  assert.equal(manifest.scope, '/calculadora/');
+  assert.equal(manifest.display, 'standalone');
   for (const icon of manifest.icons) await access(new URL(icon.src, calculatorRoot));
   const worker = await readFile(new URL('sw.js', calculatorRoot), 'utf8');
   for (const [, asset] of worker.matchAll(/'(\.\/[^']*)'/g)) {

@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Calculadora | Mytragor</title>
-  <meta name="description" content="Acompanhe a Vida dos dois jogadores e de seus aliados durante uma partida de Mytragor.">
-  <meta name="theme-color" content="#0b0f14"/>
+  <meta name="description" content="Acompanhe Vida, aliados e rolagens de d20. Instale a calculadora Mytragor no celular para usar offline.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mytragor">
+  <meta name="theme-color" content="#050505"/>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
   <style>
     :root{
       /* Black & Gold theme */
@@ -37,7 +42,7 @@
     body::after{right:-80px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%);filter:blur(12px)}
 
     /* layout: fixed header, fixed life row, allies fills remaining, fixed footer */
-    .wrap{position:relative;z-index:1;height:100vh;height:100dvh;min-height:680px;display:grid;grid-template-rows:80px 240px 1fr 72px;gap:14px;padding:14px;max-width:760px;margin:0 auto;min-width:320px}
+    .wrap{position:relative;z-index:1;height:100vh;height:100dvh;min-height:680px;display:grid;grid-template-rows:118px auto 1fr 72px;gap:14px;padding:14px;max-width:760px;margin:0 auto;min-width:320px}
 
     .card{position:relative;background:
       linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01) 18%, rgba(0,0,0,0.16) 100%),
@@ -50,7 +55,10 @@
     /* specific card slots to avoid overlap */
     .header-card{align-items:center;justify-content:flex-start;padding:14px 16px}
     .header-card::after{content:"Mesa de batalha";position:absolute;right:18px;top:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,235,215,0.45)}
-    .allies-card{display:flex;flex-direction:column;padding:14px 12px 12px;overflow:auto}
+    .allies-card{display:flex;flex-direction:column;padding:14px 12px 12px;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(212,175,55,0.3) transparent}
+    .allies-card::-webkit-scrollbar{width:8px}
+    .allies-card::-webkit-scrollbar-thumb{background:rgba(212,175,55,0.28);border-radius:8px}
+    .allies-card::-webkit-scrollbar-track{background:transparent}
     .allies-card::before{content:"Aliados em campo";display:block;align-self:flex-start;margin:0 0 12px 4px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(243,235,215,0.56)}
     .life-row{display:grid}
     .site-return{color:var(--gold);font-size:12px;text-decoration:none}
@@ -60,7 +68,10 @@
     .header-left{display:flex;flex-direction:column;gap:2px;min-width:0}
     .header-center{display:flex;flex-direction:column;align-items:center;gap:6px}
     .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;min-width:0}
-    .title{font-size:28px;margin:0;color:#f4d98e;letter-spacing:0.10em;font-weight:800;font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+    .title{font-size:30px;margin:0;letter-spacing:0.12em;font-weight:800;font-family:"Cinzel","Palatino Linotype","Book Antiqua",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase;
+      background:linear-gradient(180deg,#ffe9ad 0%,#f4d98e 38%,#c9972c 72%,#8a6a1c 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6))}
     .header-left .mini{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-align:left}
     .header-center .mini{padding:8px 14px;border:1px solid rgba(212,175,55,0.14);border-radius:999px;background:rgba(212,175,55,0.05);letter-spacing:.22em;text-transform:uppercase}
     @keyframes pulse-gold {
@@ -72,20 +83,27 @@
     .mini{text-align:center;font-size:12px;color:var(--muted)}
 
     .row{display:flex;gap:8px;align-items:center;justify-content:space-between;width:100%;min-width:0}
-    .lifeWrap{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:14px;width:100%}
+    .lifeWrap{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:14px;width:100%;position:relative}
+    .vs-badge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;letter-spacing:.06em;color:#f4d98e;font-family:"Cinzel",Georgia,serif;background:radial-gradient(circle at 32% 28%, #2e2412, #0b0b0b 72%);border:1px solid rgba(212,175,55,0.5);box-shadow:0 6px 18px rgba(0,0,0,0.65), 0 0 16px rgba(212,175,55,0.22);pointer-events:none}
     .lifeCard{display:flex;flex-direction:column;gap:10px;padding:10px;min-height:0;align-items:stretch;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(212,175,55,0.02) 60%, rgba(0,0,0,0.18))}
     .lifeCard::after{content:"";position:absolute;left:14px;right:14px;top:0;height:1px;background:linear-gradient(90deg, transparent, rgba(212,175,55,0.28), transparent)}
 
-    .life{font-size:40px;font-weight:900;text-align:center;border:2px solid rgba(212,175,55,0.12);border-radius:16px;padding:10px 4px;min-width:0;color:var(--gold);background:linear-gradient(180deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02));text-shadow:0 10px 22px rgba(0,0,0,0.58);box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)}
+    .life{font-size:44px;font-weight:900;text-align:center;border:2px solid rgba(212,175,55,0.12);border-radius:16px;padding:10px 4px;min-width:0;color:var(--gold);background:linear-gradient(180deg, rgba(212,175,55,0.10), rgba(212,175,55,0.02));text-shadow:0 10px 22px rgba(0,0,0,0.58);box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);font-variant-numeric:tabular-nums}
+    @keyframes life-pop{0%{transform:scale(1)}40%{transform:scale(1.07)}100%{transform:scale(1)}}
+    .life.pop{animation:life-pop .22s ease}
 
     /* half-life warning: when life <= 10 */
     .life.low{color:var(--marcial);border-color:var(--marcial);background:linear-gradient(180deg, rgba(239,68,68,0.06), transparent);box-shadow:0 8px 28px rgba(239,68,68,0.08)}
 
-    .name{font-size:13px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f6edd6;cursor:pointer;font-weight:700;letter-spacing:.04em}
+    .name{font-size:15px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#f6edd6;cursor:pointer;font-weight:800;letter-spacing:.07em;font-family:"Cinzel","Palatino Linotype",Georgia,serif}
     .chosen{font-size:11px;text-align:center;color:var(--gold);border:1px dashed rgba(212,175,55,0.18);border-radius:12px;padding:8px 10px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:linear-gradient(180deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));box-shadow:inset 0 1px 0 rgba(255,255,255,0.04)}
 
     .bigbtn{flex:1;padding:12px;border-radius:14px;border:1px solid rgba(212,175,55,0.16);background:linear-gradient(180deg, rgba(212,175,55,0.16), rgba(212,175,55,0.04));color:#f3db9d;font-weight:800;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)}
     .bigbtn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,0.44);border-color:rgba(212,175,55,0.28)}
+    /* código de cores: dano (vermelho) / cura (verde) */
+    .bigbtn[data-delta="-1"], .ally .btn[data-delta="-1"]{border-color:rgba(239,68,68,0.3);color:#f0a8a8;background:linear-gradient(180deg, rgba(239,68,68,0.15), rgba(239,68,68,0.03))}
+    .bigbtn[data-delta="1"], .ally .btn[data-delta="1"]{border-color:rgba(74,222,128,0.26);color:#bce8c6;background:linear-gradient(180deg, rgba(74,222,128,0.13), rgba(74,222,128,0.03))}
+    .bigbtn.danger{border-color:rgba(239,68,68,0.3);color:#f0a8a8;background:linear-gradient(180deg, rgba(239,68,68,0.12), rgba(239,68,68,0.02))}
 
     /* smaller controls inside life cards to prevent overflow */
     .lifeCard .bigbtn{padding:10px;font-size:16px;border-radius:10px;box-sizing:border-box}
@@ -103,10 +121,13 @@
     .d20-btn.rolling{animation: d20-roll 0.9s cubic-bezier(.2,.8,.2,1)}
     @keyframes d20-roll{0%{transform:rotate(0) scale(1)}25%{transform:rotate(15deg) scale(1.02)}50%{transform:rotate(-18deg) scale(1.04)}75%{transform:rotate(8deg) scale(1.02)}100%{transform:rotate(0) scale(1)}}
     /* SVG d20 styling */
-    .d20-btn{background:transparent;border:1px solid rgba(212,175,55,0.06);padding:6px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;appearance:none;-webkit-appearance:none}
+    .d20-btn{background:radial-gradient(circle at 35% 30%, rgba(212,175,55,0.10), transparent 70%);border:1px solid rgba(212,175,55,0.22);padding:6px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;appearance:none;-webkit-appearance:none;filter:drop-shadow(0 6px 14px rgba(0,0,0,0.5));transition:border-color .2s ease, box-shadow .2s ease}
+    .d20-btn:hover{border-color:rgba(212,175,55,0.45);box-shadow:0 0 16px rgba(212,175,55,0.18)}
     .d20-svg{width:72px;height:72px;display:block;background:transparent}
-    .d20-svg .face{fill:url(#goldGrad2);stroke:rgba(0,0,0,0.28);stroke-width:1}
+    .d20-svg .face{fill:url(#goldGrad2);stroke:rgba(212,175,55,0.55);stroke-width:1.5}
     .d20-svg .edge{fill:rgba(0,0,0,0.06)}
+    .d20-btn.crit{box-shadow:0 0 22px rgba(212,175,55,0.6);border-color:var(--gold)}
+    .d20-btn.fumble{box-shadow:0 0 22px rgba(239,68,68,0.55);border-color:var(--marcial)}
     .d20-svg .num{
       fill:var(--text);
       stroke:rgba(0,0,0,0.7);
@@ -114,7 +135,7 @@
       stroke-linejoin:round;
       paint-order:stroke fill;
       font-weight:900;
-      font-size:18px;
+      font-size:34px;
       font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
       transform-origin:50% 50%;
       transform-box:fill-box;
@@ -136,9 +157,13 @@
     .ally .btns{display:flex;gap:8px}
     .ally .btn{padding:8px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));color:var(--text);font-weight:800;cursor:pointer}
 
-    .footer{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;align-items:center;padding:10px}
+    .footer{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:10px;width:100%;align-items:center;padding:10px}
     .muted{color:var(--muted);font-size:11px;text-align:center}
-    #install{position:fixed;bottom:16px;left:16px;right:16px;display:none}
+    .install-dialog{width:calc(100% - 32px);max-width:420px;max-height:calc(100dvh - 32px);overflow:auto;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--card-bg);color:var(--text);line-height:1.5}
+    .install-dialog::backdrop{background:rgba(0,0,0,.78)}
+    .install-dialog h2{margin-top:0;color:var(--gold);font-size:20px}
+    .install-dialog button[hidden]{display:none}
+    .install-status{color:var(--gold)}
     .editor-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.78);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}
     .editor-backdrop.open{display:flex}
     .editor-modal{width:min(100%, 360px);background:linear-gradient(180deg, rgba(22,22,22,0.98), rgba(5,5,5,0.98));border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 18px 48px rgba(0,0,0,0.72)}
@@ -146,13 +171,16 @@
     .editor-input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(212,175,55,0.18);background:#111;color:var(--text);font-size:16px;outline:none}
     .editor-help{margin-top:8px;font-size:12px;color:var(--muted);min-height:18px}
     .editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(16px);background:rgba(11,11,11,0.95);border:1px solid rgba(212,175,55,0.4);color:var(--gold);padding:10px 18px;border-radius:12px;font-weight:800;font-size:13px;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:30}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .winner-text{font-size:16px;font-weight:800;color:var(--text);margin:6px 0 4px;line-height:1.3}
     /* Responsive adjustments for small screens */
     @media (max-width:480px){
-      .wrap{padding:6px;max-width:420px;grid-template-rows:54px 168px 1fr 46px;gap:5px;height:100vh;height:100dvh;min-height:560px}
+      .wrap{padding:6px;max-width:420px;grid-template-rows:64px 168px 1fr 46px;gap:5px;height:100vh;height:100dvh;min-height:500px}
       .card{border-radius:14px;padding:6px}
       .header-card{padding:8px 10px}
       .header-card::after{top:8px;right:10px;font-size:8px;letter-spacing:.16em}
-      .allies-card{padding:5px 6px 4px;overflow:hidden}
+      .allies-card{padding:5px 6px 4px;overflow:auto}
       .allies-card::before{margin:0 0 4px 2px;font-size:8px;letter-spacing:.16em}
       .header{padding:0 4px;gap:6px}
       .header-left{min-width:0}
@@ -160,13 +188,14 @@
       .title{font-size:16px;letter-spacing:.07em}
       .header-center .mini{padding:4px 8px;font-size:9px}
       .lifeWrap{gap:6px;align-items:stretch}
+      .vs-badge{width:30px;height:30px;font-size:10px;border-width:1px}
       .lifeCard{gap:6px;padding:8px 6px;border-radius:14px;min-height:168px;justify-content:space-between}
       .lifeCard::after{left:10px;right:10px}
       .name{font-size:9px;letter-spacing:.01em;line-height:1.05}
       .chosen{font-size:8px;padding:5px 6px;border-radius:10px;white-space:normal;line-height:1.15;min-height:42px;display:flex;align-items:center;justify-content:center;text-align:center}
-      .d20-btn{width:84px;height:84px;font-size:16px;border-width:2px}
-      .d20-svg{width:72px;height:72px}
-      .d20-svg .num{font-size:20px}
+      .d20-btn{width:48px;height:48px;padding:4px;font-size:16px;border-width:2px}
+      .d20-svg{width:38px;height:38px}
+      .d20-svg .num{font-size:34px}
       .d20-face{font-size:16px}
       .bigbtn{padding:7px;border-radius:10px;font-size:12px}
       .precision-btn{padding:6px 10px;font-size:14px}
@@ -180,14 +209,14 @@
       .ally .val{grid-column:2;grid-row:2;font-size:13px;min-width:22px;padding:2px 5px;border-radius:8px;align-self:center}
       .ally .btns{grid-column:1;grid-row:2;gap:3px;align-self:center}
       .ally .btn{padding:5px 7px;border-radius:8px;font-size:10px}
-      .footer{grid-template-columns:1fr 1fr;gap:6px;padding:4px}
+      .footer{grid-template-columns:repeat(3, minmax(0, 1fr));gap:6px;padding:4px}
       .footer .bigbtn{width:100%}
       .row.mini{flex-direction:column;gap:6px}
       .box{width:100%}
     }
 
     @media (max-width:390px){
-      .wrap{grid-template-rows:50px 154px 1fr 42px;gap:4px;padding:4px}
+      .wrap{grid-template-rows:60px 154px 1fr 42px;gap:4px;padding:4px}
       .title{font-size:14px}
       .header-center .mini{padding:3px 7px;font-size:8px}
       .lifeWrap{gap:5px}
@@ -222,7 +251,20 @@
           </div>
 
           <div class="header-center" style="align-items:center">
-            <div class="mini">Calculadora</div>
+            <button class="d20-btn" id="d20btn" onclick="rollD20()" aria-label="Rolar d20" title="Rolar d20">
+              <svg class="d20-svg" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                  <linearGradient id="goldGrad2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8a6a1c"/>
+                    <stop offset="0.5" stop-color="#3a2d10"/>
+                    <stop offset="1" stop-color="#151006"/>
+                  </linearGradient>
+                </defs>
+                <polygon class="face" points="50,3 90,26 90,74 50,97 10,74 10,26"/>
+                <polygon class="edge" points="50,3 90,26 50,38 10,26"/>
+                <text class="num" id="d20num" x="50" y="54" text-anchor="middle" dominant-baseline="central">20</text>
+              </svg>
+            </button>
           </div>
 
           <div class="header-right">
@@ -253,38 +295,36 @@
           <button class="bigbtn" onclick="mod('p2',+1)" data-player="p2" data-delta="1">+1</button>
         </div>
       </div>
+      <div class="vs-badge">VS</div>
     </div>
 
     <!-- 3) Allies grid (10 tiles total) -->
     <div class="card allies-card" style="padding:6px">
-      <div class="allies">
-        <!-- P1 left / P2 right -->
-        <!-- generated below with script if desired; here inline static for caching simplicity -->
-        <div class="ally" data-p="p1" data-idx="0"><div class="an" onclick="editAlly('p1',0)">Aliado 1</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p1',0,-1)">-1</button><button class="btn" onclick="allyDelta('p1',0,1)">+1</button></div></div>
-        <div class="ally" data-p="p2" data-idx="0"><div class="an" onclick="editAlly('p2',0)">Aliado 1</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p2',0,-1)">-1</button><button class="btn" onclick="allyDelta('p2',0,1)">+1</button></div></div>
-
-        <div class="ally" data-p="p1" data-idx="1"><div class="an" onclick="editAlly('p1',1)">Aliado 2</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p1',1,-1)">-1</button><button class="btn" onclick="allyDelta('p1',1,1)">+1</button></div></div>
-        <div class="ally" data-p="p2" data-idx="1"><div class="an" onclick="editAlly('p2',1)">Aliado 2</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p2',1,-1)">-1</button><button class="btn" onclick="allyDelta('p2',1,1)">+1</button></div></div>
-
-        <div class="ally" data-p="p1" data-idx="2"><div class="an" onclick="editAlly('p1',2)">Aliado 3</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p1',2,-1)">-1</button><button class="btn" onclick="allyDelta('p1',2,1)">+1</button></div></div>
-        <div class="ally" data-p="p2" data-idx="2"><div class="an" onclick="editAlly('p2',2)">Aliado 3</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p2',2,-1)">-1</button><button class="btn" onclick="allyDelta('p2',2,1)">+1</button></div></div>
-
-        <div class="ally" data-p="p1" data-idx="3"><div class="an" onclick="editAlly('p1',3)">Aliado 4</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p1',3,-1)">-1</button><button class="btn" onclick="allyDelta('p1',3,1)">+1</button></div></div>
-        <div class="ally" data-p="p2" data-idx="3"><div class="an" onclick="editAlly('p2',3)">Aliado 4</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p2',3,-1)">-1</button><button class="btn" onclick="allyDelta('p2',3,1)">+1</button></div></div>
-
-        <div class="ally" data-p="p1" data-idx="4"><div class="an" onclick="editAlly('p1',4)">Aliado 5</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p1',4,-1)">-1</button><button class="btn" onclick="allyDelta('p1',4,1)">+1</button></div></div>
-        <div class="ally" data-p="p2" data-idx="4"><div class="an" onclick="editAlly('p2',4)">Aliado 5</div><div class="val">—</div><div class="btns"><button class="btn" onclick="allyDelta('p2',4,-1)">-1</button><button class="btn" onclick="allyDelta('p2',4,1)">+1</button></div></div>
+      <div class="allies" id="alliesGrid">
+        <!-- slots de aliados gerados via script (ver generateAllies) -->
       </div>
     </div>
 
     <!-- 4) Footer / Save / Install -->
     <div class="card footer">
-      <button class="bigbtn" onclick="resetAll()">Reset</button>
+      <button class="bigbtn danger" onclick="resetAll()">Reset</button>
       <button class="bigbtn" onclick="savePrefs()">Salvar</button>
+      <button class="bigbtn" id="install" type="button">Instalar app</button>
     </div>
   </div>
 
-  <button class="bigbtn" id="install">Instalar app</button>
+  <dialog class="install-dialog" id="installDialog" aria-labelledby="installTitle">
+    <h2 id="installTitle">Calculadora no celular</h2>
+    <p>Instale gratuitamente na tela inicial, diretamente pelo navegador.</p>
+    <p><strong>Android:</strong> abra no Chrome e toque em “Instalar agora” abaixo. Se o botão não aparecer, use o menu ⋮ e escolha “Instalar app” ou “Adicionar à tela inicial”.</p>
+    <p><strong>iPhone/iPad:</strong> abra este endereço no Safari, toque em Compartilhar e depois em “Adicionar à Tela de Início”. Confirme em “Adicionar”.</p>
+    <p>Abra a calculadora uma vez com internet para preparar o uso offline. Depois, você pode jogar sem conexão; a partida fica salva neste aparelho.</p>
+    <p class="install-status" id="installStatus" role="status" aria-live="polite"></p>
+    <div class="editor-actions">
+      <button class="bigbtn" id="installNow" type="button" hidden>Instalar agora</button>
+      <button class="bigbtn" id="closeInstall" type="button">Fechar</button>
+    </div>
+  </dialog>
 
   <div class="editor-backdrop" id="nameEditor" aria-hidden="true">
     <div class="editor-modal">
@@ -299,29 +339,76 @@
     </div>
   </div>
 
+  <div class="editor-backdrop" id="winnerModal" aria-hidden="true">
+    <div class="editor-modal" style="text-align:center">
+      <div class="editor-title" style="font-size:20px">&#9876;&#65039; Fim de batalha</div>
+      <div class="winner-text" id="winnerText"></div>
+      <div class="editor-actions">
+        <button class="bigbtn" type="button" onclick="closeWinner()">Fechar</button>
+        <button class="bigbtn" type="button" onclick="closeWinner(); resetAll(true)">Nova partida</button>
+      </div>
+    </div>
+  </div>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-  // --- PWA install prompt
   let deferredPrompt = null;
   const installBtn = document.getElementById('install');
+  const installDialog = document.getElementById('installDialog');
+  const installNow = document.getElementById('installNow');
+  const installStatus = document.getElementById('installStatus');
+  const standalone = window.matchMedia('(display-mode: standalone)');
+  function updateInstallState() {
+    const installed = standalone.matches || navigator.standalone === true;
+    installBtn.textContent = installed ? 'App instalado' : 'Instalar app';
+    installNow.hidden = installed || !deferredPrompt;
+    if (installed) installStatus.textContent = 'A calculadora já está aberta como aplicativo.';
+  }
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    installBtn.style.display = 'block';
+    updateInstallState();
   });
-  installBtn.addEventListener('click', async () => {
+  installBtn.addEventListener('click', () => {
+    updateInstallState();
+    installDialog.showModal();
+  });
+  document.getElementById('closeInstall').addEventListener('click', () => installDialog.close());
+  installNow.addEventListener('click', async () => {
     if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
+    const prompt = deferredPrompt;
     deferredPrompt = null;
-    installBtn.style.display = 'none';
+    installNow.hidden = true;
+    try {
+      await prompt.prompt();
+      const choice = await prompt.userChoice;
+      installStatus.textContent = choice.outcome === 'accepted'
+        ? 'Instalação solicitada. Confirme no celular e abra pela tela inicial.'
+        : 'Instalação cancelada. Você pode continuar usando pelo navegador.';
+    } catch (error) {
+      console.error('Não foi possível iniciar a instalação.', error);
+      installStatus.textContent = 'Não foi possível instalar automaticamente. Use as instruções acima.';
+    }
   });
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    installNow.hidden = true;
+    installBtn.textContent = 'App instalado';
+    installStatus.textContent = 'Calculadora instalada! Abra pela tela inicial.';
+  });
+  standalone.addEventListener('change', updateInstallState);
+  updateInstallState();
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(error => {
+    navigator.serviceWorker.register('./sw.js').then(() => navigator.serviceWorker.ready).then(() => {
+      if (!installStatus.textContent) installStatus.textContent = 'Calculadora pronta para uso offline.';
+    }).catch(error => {
       console.error('Não foi possível ativar a calculadora offline.', error);
-      alert('Não foi possível ativar o uso offline. A calculadora continua disponível nesta página.');
+      installStatus.textContent = 'O uso offline não foi preparado. Conecte-se à internet e recarregue para tentar novamente.';
+      showToast('Não foi possível ativar o uso offline.');
     });
+  } else {
+    installStatus.textContent = 'Este navegador não permite preparar o uso offline. Use Chrome no Android ou Safari no iPhone.';
   }
 </script>
 
@@ -335,6 +422,68 @@
   const nameEditorState = { mode: null, player: null, index: null }
   const CHOSEN_CATALOG = globalThis.MYTRAGOR_CHOSEN || []
   const ALLY_SUGGESTIONS = globalThis.MYTRAGOR_ALLIES || []
+
+  // --- Geração dos slots de aliados (5 por jogador, intercalados P1/P2)
+  function generateAllies(){
+    const grid = get('alliesGrid')
+    let html = ''
+    for(let i=0;i<5;i++){
+      for(const p of ['p1','p2']){
+        html += `<div class="ally" data-p="${p}" data-idx="${i}">`
+          + `<div class="an" onclick="editAlly('${p}',${i})">Aliado ${i+1}</div>`
+          + `<div class="val">—</div>`
+          + `<div class="btns">`
+          + `<button class="btn" data-ally-p="${p}" data-ally-idx="${i}" data-delta="-1" onclick="allyDelta('${p}',${i},-1)">-1</button>`
+          + `<button class="btn" data-ally-p="${p}" data-ally-idx="${i}" data-delta="1" onclick="allyDelta('${p}',${i},1)">+1</button>`
+          + `</div></div>`
+      }
+    }
+    grid.innerHTML = html
+  }
+  generateAllies()
+
+  // --- Toast (feedback não bloqueante)
+  let toastTimer = null
+  function showToast(msg){
+    const t = get('toast')
+    t.textContent = msg
+    t.classList.add('show')
+    clearTimeout(toastTimer)
+    toastTimer = setTimeout(()=> t.classList.remove('show'), 1800)
+  }
+
+  // --- Autosave (persiste o estado após qualquer mudança)
+  let autosaveTimer = null
+  function autosave(){
+    clearTimeout(autosaveTimer)
+    autosaveTimer = setTimeout(persist, 400)
+  }
+
+  // --- D20
+  let d20Timer = null
+  function rollD20(){
+    const btn = get('d20btn')
+    const num = get('d20num')
+    btn.classList.remove('rolling','crit','fumble')
+    void btn.offsetWidth // reinicia a animação
+    btn.classList.add('rolling')
+    if(d20Timer) clearInterval(d20Timer)
+    let ticks = 0
+    d20Timer = setInterval(()=>{
+      ticks++
+      const v = 1 + Math.floor(Math.random()*20)
+      num.textContent = v
+      if(ticks >= 9){
+        clearInterval(d20Timer)
+        d20Timer = null
+        num.classList.add('pop')
+        if(v === 20) btn.classList.add('crit')
+        if(v === 1) btn.classList.add('fumble')
+        if(navigator.vibrate) navigator.vibrate(v === 20 ? [30,40,30] : 15)
+        setTimeout(()=> num.classList.remove('pop'), 350)
+      }
+    }, 85)
+  }
 
   function getAllyCatalogEntry(name){
     const normalized = (name || '').trim().toLowerCase()
@@ -414,7 +563,7 @@
       const allyEntry = getAllyCatalogEntry(value)
       const allowedNames = getAllowedAllySuggestions(player).map(entry => entry.name.toLowerCase())
       if(value && allyEntry && !allowedNames.includes(allyEntry.name.toLowerCase())){
-        alert('Esse aliado nao pertence a filiacao do escolhido nem e neutro.')
+        showToast('Esse aliado não pertence à filiação do escolhido nem é neutro.')
         return
       }
       const allyBase = document.querySelector(`.ally[data-p="${player}"][data-idx="${nameEditorState.index}"]`)
@@ -431,6 +580,7 @@
     if(nameEditorState.mode === 'chosen' && player){
       setChosen(player, value)
     }
+    autosave()
     closeNameEditor()
   }
 
@@ -450,12 +600,21 @@
   }
 
   // Vitória
+  function showWinner(text){
+    get('winnerText').textContent = text
+    get('winnerModal').classList.add('open')
+    get('winnerModal').setAttribute('aria-hidden', 'false')
+  }
+  function closeWinner(){
+    get('winnerModal').classList.remove('open')
+    get('winnerModal').setAttribute('aria-hidden', 'true')
+  }
   function checkWinner(){
     const p1 = parseInt(get('p1life').textContent, 10)
     const p2 = parseInt(get('p2life').textContent, 10)
-    if(p1===0 && p2>0){ alert((get('p2name').textContent || 'Jogador 2') + ' ganhou!') }
-    else if(p2===0 && p1>0){ alert((get('p1name').textContent || 'Jogador 1') + ' ganhou!') }
-    else if(p1===0 && p2===0){ alert('Empate: ambos chegaram a 0.') }
+    if(p1===0 && p2>0){ showWinner((get('p2name').textContent || 'Jogador 2') + ' venceu a batalha!') }
+    else if(p2===0 && p1>0){ showWinner((get('p1name').textContent || 'Jogador 1') + ' venceu a batalha!') }
+    else if(p1===0 && p2===0){ showWinner('Empate: ambos chegaram a 0.') }
   }
 
   // apply visual state for life (half warning)
@@ -476,8 +635,13 @@
     let v = parseInt(el.textContent||'0',10)
     v = clamp0(v + d)
     el.textContent = v
+    el.classList.remove('pop')
+    void el.offsetWidth // reinicia a animação de "pop"
+    el.classList.add('pop')
     applyAffBorder(p)
     applyLifeState(p)
+    if(navigator.vibrate) navigator.vibrate(8)
+    autosave()
     if(v===0) checkWinner()
   }
 
@@ -496,6 +660,8 @@
       valEl.textContent = v
     }
     applyAffBorder(p)
+    if(navigator.vibrate) navigator.vibrate(8)
+    autosave()
   }
 
   // Affiliation dots → color
@@ -518,10 +684,12 @@
         a.style.borderColor = slotColor
         a.style.borderWidth = '2px'
         a.style.boxShadow = `0 10px 30px ${slotColor}55`
+        a.style.opacity = '1'
       }else{
         a.style.borderColor = color + '55'
         a.style.borderWidth = '1px'
         a.style.boxShadow = 'none'
+        a.style.opacity = '0.65' // esmaece slots vazios
       }
     })
   }
@@ -543,7 +711,7 @@
   }
 
   // Save / Load
-  function savePrefs(){
+  function persist(){
     const data = {
       p1:{
         name:get('p1name').textContent, chosen:get('p1chosen').textContent.replace(/^Escolhido:\s*/, ''), life:get('p1life').textContent, aff:state.p1.aff,
@@ -554,14 +722,17 @@
         allies:[...document.querySelectorAll('.ally[data-p="p2"]')].map(a=>({name:a.querySelector('.an').textContent, life:a.querySelector('.val').textContent}))
       }
     }
-    try {
+    try{
       localStorage.setItem('mytragor_hud_pwa', JSON.stringify(data))
-    } catch (error) {
+      return true
+    }catch(error){
       console.error('Não foi possível salvar a partida.', error)
-      alert('Não foi possível salvar a partida neste navegador. Verifique as permissões de armazenamento.')
-      return
+      showToast('Não foi possível salvar. Verifique o armazenamento do navegador.')
+      return false
     }
-    alert('Salvo!')
+  }
+  function savePrefs(){
+    if(persist()) showToast('Salvo!')
   }
   function loadPrefs(){
     try{
@@ -588,12 +759,13 @@
       applyAffBorder('p1'); applyAffBorder('p2')
       applyLifeState('p1'); applyLifeState('p2')
     }catch(error){
-      console.error('Não foi possível restaurar a partida salva.', error)
-      alert('Não foi possível restaurar a partida salva. Confira os contadores antes de continuar.')
+      console.error('Não foi possível carregar a partida salva.', error)
+      showToast('Não foi possível carregar a partida salva.')
     }
   }
 
-  function resetAll(){
+  function resetAll(force){
+    if(!force && !confirm('Reiniciar a partida? Vidas, escolhidos e aliados serão zerados.')) return
     get('p1life').textContent = '30'; get('p2life').textContent='30'
     ;['p1','p2'].forEach(p=>{
       setChosen(p, '', { applyAffinity:false })
@@ -605,6 +777,8 @@
       setAff(p,'arcana')
       applyLifeState(p)
     })
+    autosave()
+    showToast('Partida reiniciada!')
   }
 
   // Init
@@ -614,6 +788,9 @@
     get('nameEditor').addEventListener('click', (event) => {
       if(event.target === get('nameEditor')) closeNameEditor()
     })
+    get('winnerModal').addEventListener('click', (event) => {
+      if(event.target === get('winnerModal')) closeWinner()
+    })
     get('editorInput').addEventListener('keydown', (event) => {
       if(event.key === 'Enter') saveNameEditor()
       if(event.key === 'Escape') closeNameEditor()
@@ -621,41 +798,46 @@
     setupLongPressControls()
   })
 
-  // Mobile: long-press support on life +/- buttons to apply ×5 (touch-friendly)
+  // Mobile: long-press (segurar) aplica ×5 nos botões de vida e de aliados
+  function addLongPress(btn, action){
+    let holdTimer = null
+    let holdTriggered = false
+
+    const clearHold = () => {
+      if(holdTimer){
+        clearTimeout(holdTimer)
+        holdTimer = null
+      }
+    }
+
+    btn.addEventListener('pointerdown', () => {
+      holdTriggered = false
+      clearHold()
+      holdTimer = setTimeout(() => {
+        holdTriggered = true
+        action()
+      }, 450)
+    })
+
+    const stopHold = () => clearHold()
+    btn.addEventListener('pointerup', stopHold)
+    btn.addEventListener('pointerleave', stopHold)
+    btn.addEventListener('pointercancel', stopHold)
+
+    btn.addEventListener('click', (event) => {
+      if(!holdTriggered) return
+      event.preventDefault()
+      event.stopImmediatePropagation()
+      holdTriggered = false
+    }, true)
+  }
+
   function setupLongPressControls(){
     document.querySelectorAll('.lifeCard .bigbtn[data-player]').forEach(btn=>{
-      let holdTimer = null
-      let holdTriggered = false
-      const player = btn.dataset.player
-      const delta = parseInt(btn.dataset.delta || '0', 10)
-
-      const clearHold = () => {
-        if(holdTimer){
-          clearTimeout(holdTimer)
-          holdTimer = null
-        }
-      }
-
-      btn.addEventListener('pointerdown', () => {
-        holdTriggered = false
-        clearHold()
-        holdTimer = setTimeout(() => {
-          holdTriggered = true
-          mod(player, delta * 5)
-        }, 450)
-      })
-
-      const stopHold = () => clearHold()
-      btn.addEventListener('pointerup', stopHold)
-      btn.addEventListener('pointerleave', stopHold)
-      btn.addEventListener('pointercancel', stopHold)
-
-      btn.addEventListener('click', (event) => {
-        if(!holdTriggered) return
-        event.preventDefault()
-        event.stopImmediatePropagation()
-        holdTriggered = false
-      }, true)
+      addLongPress(btn, () => mod(btn.dataset.player, parseInt(btn.dataset.delta || '0', 10) * 5))
+    })
+    document.querySelectorAll('.ally .btn[data-delta]').forEach(btn=>{
+      addLongPress(btn, () => allyDelta(btn.dataset.allyP, parseInt(btn.dataset.allyIdx, 10), parseInt(btn.dataset.delta || '0', 10) * 5))
     })
   }
 

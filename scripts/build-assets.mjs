@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { normalizeCard } from './card-images.mjs';
 import { collectionVariants, fragments } from '../data/gallery.js';
+import { cards as baseCards } from '../data/cards.js';
 import { normalizeLogo } from './logo-image.mjs';
 import { buildArchive } from './build-archive.mjs';
 
@@ -19,7 +20,8 @@ const cards = (await readdir(path.join(root, 'cartas.png')))
   .sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
 for (const name of cards) {
-  const image = await normalizeCard(path.join(root, 'cartas.png', name));
+  const card = baseCards.find(entry => path.basename(entry.original) === name);
+  const image = await normalizeCard(path.join(root, 'cartas.png', name), { crop: card?.crop });
   await writeFile(path.join(output, 'cartas', name.replace(/\.png$/i, '.webp')), image);
 }
 for (const entry of [...collectionVariants, ...fragments]) {
@@ -27,7 +29,6 @@ for (const entry of [...collectionVariants, ...fragments]) {
   await writeFile(path.join(root, entry.image.slice(1)), image);
 }
 // Small catalog previews and readable zooms share exactly the same framing.
-const { cards: baseCards } = await import('../data/cards.js');
 for (const entry of [...baseCards, ...collectionVariants, ...fragments]) {
   const file = path.basename(entry.image);
   const thumbnail = await sharp(path.join(root, entry.image.slice(1))).resize(325, 450).webp({ quality: 72 }).toBuffer();

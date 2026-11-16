@@ -1,5 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 import { cards } from '../data/cards.js';
@@ -22,14 +23,54 @@ test('margens diferentes geram a mesma carta, sem distorcer a arte', async () =>
   assert.deepEqual(plain, trimmed);
 });
 
-test('todas as cartas publicadas têm 650 × 900 e preenchimento visual uniforme', async () => {
+test('todas as cartas publicadas têm 650 × 900 e enquadramento proporcional ao original', async () => {
   for (const card of cards) {
     const source = fileURLToPath(new URL(`..${card.image}`, import.meta.url));
     const { data, info } = await sharp(source).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
     assert.equal(info.width, CARD_WIDTH, card.name);
     assert.equal(info.height, CARD_HEIGHT, card.name);
     const bounds = visibleBounds(data, info);
-    assert.ok(bounds.left <= 2 && bounds.top <= 2, `${card.name}: margem inicial excessiva`);
-    assert.ok(bounds.width >= CARD_WIDTH - 3 && bounds.height >= CARD_HEIGHT - 3, `${card.name}: tamanho visível inconsistente`);
+    const original = sharp(fileURLToPath(new URL(`..${card.original}`, import.meta.url)));
+    if (card.crop) original.extract(card.crop);
+    const raw = await original.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const content = visibleBounds(raw.data, raw.info);
+    const scale = Math.min(CARD_WIDTH / content.width, CARD_HEIGHT / content.height);
+    const width = Math.round(content.width * scale);
+    const height = Math.round(content.height * scale);
+    assert.ok(Math.abs(bounds.width - width) <= 2 && Math.abs(bounds.height - height) <= 2, `${card.name}: tamanho visível inconsistente`);
+    assert.ok(Math.abs(bounds.left - (CARD_WIDTH - width) / 2) <= 2 &&
+      Math.abs(bounds.top - (CARD_HEIGHT - height) / 2) <= 2, `${card.name}: carta descentralizada`);
+  }
+});
+
+test('equipamentos publicados usam o layout atual nas três resoluções', async () => {
+  for (const card of cards.filter(entry => entry.type === 'Equipamento')) {
+    const source = fileURLToPath(new URL(`..${card.original}`, import.meta.url));
+    const image = await normalizeCard(source, { crop: card.crop });
+    const thumbnail = await sharp(image).resize(325, 450).webp({ quality: 72 }).toBuffer();
+    const reading = await normalizeCard(source, { crop: card.crop, width: 1300, height: 1800, quality: 84 });
+    for (const [url, expected] of [[card.image, image], [card.thumbnail, thumbnail], [card.reading, reading]]) {
+      assert.deepEqual(await readFile(new URL(`..${url}`, import.meta.url)), expected, `${card.name}: ${url}`);
+    }
+  }
+});
+
+test('recorte da Redoma Santa remove apenas a linha branca inferior', async () => {
+  const card = cards.find(entry => entry.id === 'redomasanta');
+  const { data, info } = await sharp(fileURLToPath(new URL(`..${card.original}`, import.meta.url)))
+    .ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  assert.deepEqual(card.crop, { left: 0, top: 0, width: info.width, height: info.height - 1 });
+  for (let x = 0; x < info.width; x++) {
+    const offset = ((info.height - 1) * info.width + x) * 4;
+    assert.ok(data[offset] >= 235 && data[offset + 1] >= 235 && data[offset + 2] >= 235);
+  }
+  for (const url of [card.image, card.thumbnail, card.reading]) {
+    const output = await sharp(fileURLToPath(new URL(`..${url}`, import.meta.url)))
+      .ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    for (let x = 0; x < output.info.width; x++) {
+      const offset = ((output.info.height - 1) * output.info.width + x) * 4;
+      assert.ok(output.data[offset + 3] === 0 || Math.min(...output.data.subarray(offset, offset + 3)) < 235,
+        `${url}: borda branca inferior`);
+    }
   }
 });

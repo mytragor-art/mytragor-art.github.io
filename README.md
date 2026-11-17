@@ -36,7 +36,7 @@ Também existem tarefas do VS Code **Prévia Mytragor** e **Testar Mytragor**. U
 - `manual/`: PDF, páginas originais e OCR original. A busca usa resumos revisados, não exibe OCR ruidoso como regra.
 - `media/`: derivados WebP para publicação. Devem ser versionados; o site publicado não depende do Node ou do Sharp.
 - As cartas WebP são recortadas pelos limites do canal alpha e enquadradas em 650 × 900, sem esticar a arte. Bordas, textos e créditos são preservados; apenas margens totalmente transparentes são removidas. `scripts/inspect-cards.mjs` permite conferir os limites dos originais.
-- Os seis equipamentos usam os layouts atuais de `cartas.png/`, nas imagens de catálogo, miniaturas e ampliações. A Redoma Santa tem um recorte explícito em `data/cards.js` para remover somente a linha branca inferior, sem alterar o PNG original. Para regenerar apenas esses derivados: `node scripts/update-cards.mjs laminaserrilhada livroarcanoinstavel mantocouro orbeabsorcao Queliceras redomasanta`.
+- Os seis equipamentos usam os layouts atuais de `cartas.png/`, nas imagens de catálogo, miniaturas e ampliações. A versão atual da Redoma Santa dispensa o antigo recorte da linha branca inferior e preserva o layout completo. Para regenerar apenas esses derivados: `node scripts/update-cards.mjs laminaserrilhada livroarcanoinstavel mantocouro orbeabsorcao Queliceras redomasanta`.
 - `lib/`: componentes da galeria e regras puras de montagem.
 - `scripts/`: geração de imagens e servidor local.
 - `tests/`: testes com executor nativo do Node.

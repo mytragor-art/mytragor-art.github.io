@@ -88,12 +88,8 @@ const sourceOverrides = {
   mantocouro: 'layout-mantocouro.ai.png',
   mascota: 'layout-aranhasmascote.ai.png'
 };
-const sourceCrops = {
-  redomasanta: { left: 0, top: 0, width: 744, height: 1050 }
-};
 export const cards = entries.map(([id, name, type, affiliation, cost, description = '', token = false]) => ({
   id, name, type, affiliation, cost, description, token,
-  crop: sourceCrops[id],
   image: `/media/cartas/layout-${id}.webp`,
   thumbnail: `/media/cartas/thumbs/layout-${id}.webp`,
   reading: `/media/cartas/leitura/layout-${id}.webp`,

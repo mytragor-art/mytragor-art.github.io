@@ -50,20 +50,14 @@ test('equipamentos publicados usam o layout atual nas três resoluções', async
     const thumbnail = await sharp(image).resize(325, 450).webp({ quality: 72 }).toBuffer();
     const reading = await normalizeCard(source, { crop: card.crop, width: 1300, height: 1800, quality: 84 });
     for (const [url, expected] of [[card.image, image], [card.thumbnail, thumbnail], [card.reading, reading]]) {
-      assert.deepEqual(await readFile(new URL(`..${url}`, import.meta.url)), expected, `${card.name}: ${url}`);
+      assert.ok((await readFile(new URL(`..${url}`, import.meta.url))).equals(expected), `${card.name}: ${url}`);
     }
   }
 });
 
-test('recorte da Redoma Santa remove apenas a linha branca inferior', async () => {
+test('Redoma Santa preserva o layout completo sem borda branca inferior', async () => {
   const card = cards.find(entry => entry.id === 'redomasanta');
-  const { data, info } = await sharp(fileURLToPath(new URL(`..${card.original}`, import.meta.url)))
-    .ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  assert.deepEqual(card.crop, { left: 0, top: 0, width: info.width, height: info.height - 1 });
-  for (let x = 0; x < info.width; x++) {
-    const offset = ((info.height - 1) * info.width + x) * 4;
-    assert.ok(data[offset] >= 235 && data[offset + 1] >= 235 && data[offset + 2] >= 235);
-  }
+  assert.equal(card.crop, undefined);
   for (const url of [card.image, card.thumbnail, card.reading]) {
     const output = await sharp(fileURLToPath(new URL(`..${url}`, import.meta.url)))
       .ensureAlpha().raw().toBuffer({ resolveWithObject: true });
